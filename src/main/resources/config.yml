@@ -1,0 +1,167 @@
+# VanillaPlus Configuration
+
+# ==========================================================
+#               Login msg's and fireworks
+# ==========================================================
+#Will launch some fireworks where player spawned. (can lagg on lesser hardware)
+Enable-Login-Fireworks: true
+#Set this to false to disable login messages.
+Show-Login-Messages: true
+#Set your own login Massages.
+Login-Messages:
+    - "§aWelcome to the server! %s"
+    - "§aHello there %s"
+
+#Set this to false to disable Player specific login messages.
+Show-Player-Specific-Login-Messages: true
+
+#Here we can set custom messages.
+Custom-Player-Messages:
+    muflafla: #<-- this one is for show.
+        Player-UUID: "bbdf8cf3-020e-4367-96eb-52e459388de9"
+        Custom-Messages:
+            - "§aWelcome"
+            - "§aHere again?"
+
+
+# ==========================================================
+#                   AUTO BAN FEATURE
+# ==========================================================
+#If this is enabled it will automatically ban anyone that joins that was not on the whitelist, So they'll be instantly greeted with a ban screen when trying to join.
+Ban-On-Join: true
+Ban-Reason: "You where not whitelisted"
+# ==========================================================
+#                   creepers/enderman
+# ==========================================================
+#If this is enabled creepers don't spawn at all
+Disable-Creeper-Spawn: false
+#If this is enabled creepers won't explode at all.
+Disable-Creeper-Explosions: false
+#If this is enabled it wil stop creepers from blowing up blocks, but it wil still damage players.
+Disable-Creeper-Block-Damage: false
+#If this is enabled and a creeper explodes it will still damage the player and blow up blocks but give all the block back.
+Creeper-Gives-all-Blocks: true
+#If this is enabled it wil stop enderman from picking up blocks
+Stop-Enderman-From-Griefing: true
+# Set this to false to stop the Enderman messages from showing up.
+Show-Enderman-Messages: true
+# You can add or remove messages here. Use %d where the number of Endermen should go.
+Enderman-Messages:
+    - "%d §5Endermen tried to redecorate your world. Denied."
+    - "%d §5Endermen were caught red-handed. Block theft failed."
+    - "%d §5Endermen attempted to rearrange blocks. Not on our watch."
+    - "%d §5Endermen snuck in with sticky fingers. We said nope."
+    - "%d §5Endermen wanted to steal your dirt. We stopped them."
+    - "%d §5Endermen were intercepted mid-grab. Justice served."
+    - "%d §5Endermen tried to start a landscaping business. We shut it down."
+    - "%d §5Endermen thought they were Minecraft decorators. We disagreed."
+    - "%d §5Endermen attempted a hostile home makeover. Denied."
+    - "%d §5Endermen tried to steal your blocks for their NFT collection."
+    - "%d §5Endermen were caught loitering with intent to rearrange dirt."
+    - "%d §5Endermen thought griefing was a personality trait. We corrected them."
+    - "%d §5Endermen applied for block relocation permits. All denied."
+    - "%d §5Endermen tried to build a portal to the cringe dimension."
+    - "%d §5Endermen were stopped mid-heist. The block mafia strikes again."
+    - "%d §5Endermen attempted to summon the spirit of interior design. It failed."
+    - "%d §5Endermen were caught playing Jenga with your terrain."
+    - "%d §5Endermen tried to start a block pyramid scheme. We banned them."
+    - "%d §5Endermen were auditioning for Minecraft Extreme Makeover. Rejected."
+    - "%d §5Endermen tried to steal your cobblestone to build a love shrine. Weird."
+    - "%d §5Endermen tried to host a block party. We revoked their permit."
+    - "%d §5Endermen attempted to terraform your base. Their license was fake."
+    - "%d §5Endermen were caught trying to build a monument to themselves."
+    - "%d §5Endermen tried to replace your floor with gravel. Monsters."
+    - "%d §5Endermen attempted a stealth mission. They failed the tutorial."
+    - "%d §5Endermen thought they were playing Minecraft Creative. They weren’t."
+    - "%d §5Endermen tried to trade blocks for vibes. We declined."
+    - "%d §5Endermen were caught in the act of pixel vandalism."
+    - "%d §5Endermen attempted to launch a block-based startup. It crashed."
+    - "%d §5Endermen tried to build a shrine to the void. Denied."
+    - "%d §5Endermen mistook your house for IKEA. No assembly allowed."
+    - "%d §5Endermen tried to install a dirt backsplash. We prefer quartz."
+    - "%d §5Endermen attempted to build a stairway to confusion."
+    - "%d §5Endermen were caught crafting chaos. We uncrafted it."
+    - "%d §5Endermen tried to start a block cult. We excommunicated them."
+    - "%d §5Endermen attempted to rebrand your terrain. Not happening."
+    - "%d §5Endermen tried to build a creeper trap. Irony ensued."
+    - "%d §5Endermen attempted to terraform with zero aesthetic sense."
+    - "%d §5Endermen were caught in a block laundering scheme."
+    - "%d §5Endermen tried to turn your base into abstract art. We prefer realism."
+    - "%d §5Enderman were seen looting your blocks, a search party is now looking for them"
+
+
+# ==========================================================
+# HORROR SETTINGS
+# ==========================================================
+# If set to true, the plugin will occasionally play ghost sounds,
+# spawn fake entities, and send 'creepy' messages to random players.
+# This is a purely cosmetic psychological horror feature.
+Enable-Creepy-Stuff: false
+
+# ==========================================================
+#                          Beacons
+# ==========================================================
+#Enables the increased beacon radius
+Enable-Beacon-Changes: true
+#Sets the beacon radius
+Beacon-Radius: 150
+
+# ==========================================================
+# CUSTOM RECIPE CONFIGURATION
+# ==========================================================
+# 1. 'Result' must be a valid Minecraft Material name.
+# 2. 'Shape' is a 3x3 grid. Each line is one row of the crafting table.
+# 3. 'Ingredients' maps the letters in your shape to items.
+# 4. Use " " for empty slots, Aka just use a space.
+# ==========================================================
+
+Enable-Custom-Recipes: true
+
+Custom-Recipes:
+    Explanation-ITEM: # <--- This name you can set this to whatever aslong as it's not the same as wats already used in other items, for now its Explanation-ITEM because this item is for explaination.
+        Result: "DIRT" # <--- The item you want crafted with your new recipe.
+        Amount: 1 #<--- The amount you get in game.
+        Display-Name: "&6The Holy Dirt of the Void" # <--- Custom Name! (Supports & color codes). if nothing is set here it wil use the default in game name.
+        Player-Head-Name: #<--- if there is a player name here it wil create a player head named this, for heads the result must be set to PLAYER_HEAD
+        # Visual Guide:
+        #  [Slot A] [Slot A] [Slot A]
+        #  [Slot B] [Slot C] [Slot B]
+        #  [Slot D] [Slot D] [Slot D]
+        Shape:
+            - "ABC"
+            - "DEF"
+            - "GHI"
+        # Define what each letter represents (up to 9 unique items) for an empty slot use AIR.
+        Ingredients:
+            A: "NETHERITE_BLOCK"
+            B: "DIAMOND_BLOCK"
+            C: "EMERALD_BLOCK"
+            D: "NETHER_STAR"
+            E: "DRAGON_EGG"
+            F: "BEACON"
+            G: "DRAGON_BREATH"
+            H: "TOTEM_OF_UNDYING"
+            I: "ENCHANTED_GOLDEN_APPLE"
+
+
+
+#    #here is an empty one for you to edit.
+#    WHATEVER:
+#        Result: "ITEM_YOU_WANT"
+#        Amount: 1
+#        Display-Name: "YOUR DISPLAY NAME"
+#        Shape:
+#            - "ABC"
+#            - "DEF"
+#            - "GHI"
+#        # Define what each letter represents (up to 9 unique items) for an empty slot use AIR.
+#        Ingredients:
+#            A: "BLOCK_A"
+#            B: "BLOCK_B"
+#            C: "BLOCK_C"
+#            D: "BLOCK_D"
+#            E: "BLOCK_E"
+#            F: "BLOCK_F"
+#            G: "BLOCK_G"
+#            H: "BLOCK_H"
+#            I: "BLOCK_I"

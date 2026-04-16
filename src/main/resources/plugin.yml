@@ -1,0 +1,12 @@
+name: VanillaPlus
+version: '${version}'
+
+main: BK.vanilaPlus.VanillaPlus
+api-version: '1.21'
+load: POSTWORLD
+
+commands:
+  vp-reload:
+    description: Reloads the VanillaPlus configuration.
+    permission: VanillaPlus.reload
+    default: op # This means only Ops can use it by default
