@@ -9,7 +9,7 @@
 
 #### 🛡️ **Smart Anti-Grief & Creeper Control**
 You are in total command of how mobs interact with your world:
-* **Block Restoration:** Configure Creepers to **return 100% of the blocks they destroy**—keep the danger without the cleanup!
+* **100% Block Drops:** Creepers will drop every single block they destroy as an item—keep the danger of the blast without losing your rare materials.
 * **Griefing Toggle:** Allow explosions to hurt players while keeping the terrain perfectly intact.
 * **Total Defusal:** Disable explosions entirely or stop specific mobs from spawning.
 * **Enderman Protection:** Stop them from picking up blocks. Includes customizable (and hilarious) notification messages when they try!
@@ -50,4 +50,4 @@ Everything is **fully customizable**. From the welcome messages and player-speci
 ---
 ### **💡 Feature Requests & Support**
 Have a cool idea for a new feature? Want more stats in the Tab-list? Feature requests are always welcome! >
-Please use the Discussions tab here on GitHub to let me know what you'd like to see in the next update. I'm always looking to make VanillaPlus better.
+Please use the Discussions tab here on Hangar to let me know what you'd like to see in the next update. I'm always looking to make VanillaPlus better for the community!
