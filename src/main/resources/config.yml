@@ -1,4 +1,6 @@
 # VanillaPlus Configuration
+#do not change this version number!
+Config-Version: "1.0.1"
 
 # ==========================================================
 #               Login msg's and fireworks
@@ -23,7 +25,11 @@ Custom-Player-Messages:
             - "§aWelcome"
             - "§aHere again?"
 
-
+# ==========================================================
+#               Mystical Stash
+# ==========================================================
+#this enables use of the Mystical Stash
+Enable-Mystical-Stash: true
 # ==========================================================
 #                   AUTO BAN FEATURE
 # ==========================================================

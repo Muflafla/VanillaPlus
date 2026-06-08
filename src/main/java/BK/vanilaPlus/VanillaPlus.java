@@ -50,11 +50,14 @@ public class VanillaPlus extends JavaPlugin implements Listener
     public boolean Enable_Beacon_Changes;
     public double Beacon_Radius;
     public boolean Enable_Creepy_Stuff;
+    public boolean Enable_Mystical_Stash;
 
     @Override
     public void onEnable()
     {
-        this.saveDefaultConfig();
+        // Check and update config to new version
+        ConfigUpdater updater = new ConfigUpdater(this);
+        updater.update();
 
         Bukkit.getPluginManager().registerEvents(this, this);
         BeaconManager beaconManager = new BeaconManager(this);
@@ -100,6 +103,8 @@ public class VanillaPlus extends JavaPlugin implements Listener
         Enable_Creepy_Stuff = getConfig().getBoolean("Enable-Creepy-Stuff",false);
         //the timer checks if its enabled or not, this is needed for if it's changed in while server is on so timer knows to stop
         startCreepyTimer();
+        //if true enable mystical stash
+        Enable_Mystical_Stash = getConfig().getBoolean("Enable-Mystical-Stash",true);
 
 
         if(EndermanTask != null)
@@ -382,65 +387,72 @@ public class VanillaPlus extends JavaPlugin implements Listener
     @EventHandler
     public void giveCustomBookIfMissing(PlayerJoinEvent event)
     {
-        Player player = event.getPlayer();
-        boolean hasBook = false;
-        boolean hasSpace = false;
-
-        for (ItemStack item : player.getInventory().getContents())
+        //check if enabled
+        if(Enable_Mystical_Stash)
         {
-            if (item == null || item.getType() == Material.AIR)
+            Player player = event.getPlayer();
+            boolean hasBook = false;
+            boolean hasSpace = false;
+
+            for (ItemStack item : player.getInventory().getContents())
             {
-                hasSpace = true;
-            }
-            else if (item.getType() == Material.WRITTEN_BOOK)
-            {
-                BookMeta meta = (BookMeta) item.getItemMeta();
-                if (meta.hasAuthor() && meta.getAuthor().equals("§bServer Wizard"))
+                if (item == null || item.getType() == Material.AIR)
                 {
-                    hasBook = true;
+                    hasSpace = true;
+                }
+                else if (item.getType() == Material.WRITTEN_BOOK)
+                {
+                    BookMeta meta = (BookMeta) item.getItemMeta();
+                    if (meta.hasAuthor() && meta.getAuthor().equals("§bServer Wizard"))
+                    {
+                        hasBook = true;
+                    }
                 }
             }
-        }
 
-        if (!hasBook && hasSpace)
-        {
-            ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
-            BookMeta meta = (BookMeta) book.getItemMeta();
-            meta.setDisplayName("§dMystical Stash");
-            meta.setTitle("§6VanillaPlus Extra inv");
-            meta.setAuthor("§bServer Wizard");
+            if (!hasBook && hasSpace)
+            {
+                ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
+                BookMeta meta = (BookMeta) book.getItemMeta();
+                meta.setDisplayName("§dMystical Stash");
+                meta.setTitle("§6VanillaPlus Extra inv");
+                meta.setAuthor("§bServer Wizard");
 
-            List<String> pages = new ArrayList<>();
-            pages.add("§dNothing to see here!");
-            meta.setPages(pages);
+                List<String> pages = new ArrayList<>();
+                pages.add("§dNothing to see here!");
+                meta.setPages(pages);
 
-            book.setItemMeta(meta);
-            player.getInventory().addItem(book);
-            player.sendMessage("§aYou have received the §dMystical Stash§a!");
-        }
-        else if (!hasSpace && !hasBook)
-        {
-            player.sendMessage("§aINV IS FULL NO §dMystical Stash§a! FOR YOU");
+                book.setItemMeta(meta);
+                player.getInventory().addItem(book);
+                player.sendMessage("§aYou have received the §dMystical Stash§a!");
+            }
+            else if (!hasSpace && !hasBook)
+            {
+                player.sendMessage("§aINV IS FULL NO §dMystical Stash§a! FOR YOU");
+            }
         }
     }
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event)
     {
-        ItemStack item = event.getItem();
-
-        if (item != null && item.getType() == Material.WRITTEN_BOOK)
+        if(Enable_Mystical_Stash)
         {
-            ItemMeta meta = item.getItemMeta();
-            if (meta instanceof BookMeta)
+            ItemStack item = event.getItem();
+
+            if (item != null && item.getType() == Material.WRITTEN_BOOK)
             {
-                BookMeta bookMeta = (BookMeta) meta;
-                if (bookMeta.hasDisplayName())
+                ItemMeta meta = item.getItemMeta();
+                if (meta instanceof BookMeta)
                 {
-                    if (bookMeta.hasAuthor() && bookMeta.getAuthor().equals("§bServer Wizard"))
+                    BookMeta bookMeta = (BookMeta) meta;
+                    if (bookMeta.hasDisplayName())
                     {
-                        event.setCancelled(true);
-                        openMysticalStash(event.getPlayer());
+                        if (bookMeta.hasAuthor() && bookMeta.getAuthor().equals("§bServer Wizard"))
+                        {
+                            event.setCancelled(true);
+                            openMysticalStash(event.getPlayer());
+                        }
                     }
                 }
             }
@@ -450,76 +462,88 @@ public class VanillaPlus extends JavaPlugin implements Listener
     @EventHandler
     public void onInventoryOpen(InventoryOpenEvent event)
     {
-        //check if the inv title is Mystical Stash
-        if (event.getView().getTitle().equals("Mystical Stash"))
+        if(Enable_Mystical_Stash)
         {
-            //check if this is the book or a chest by chacking if its labeled StashHolder
-            if (!(event.getInventory().getHolder() instanceof StashHolder))
+            //check if the inv title is Mystical Stash
+            if (event.getView().getTitle().equals("Mystical Stash"))
             {
-                // Stop the player from opening the physical chest
-                event.setCancelled(true);
+                //check if this is the book or a chest by chacking if its labeled StashHolder
+                if (!(event.getInventory().getHolder() instanceof StashHolder))
+                {
+                    // Stop the player from opening the physical chest
+                    event.setCancelled(true);
 
-                //Open the "Real" virtual stash instead
-                openMysticalStash((Player) event.getPlayer());
+                    //Open the "Real" virtual stash instead
+                    openMysticalStash((Player) event.getPlayer());
+                }
+                // If it IS a StashHolder/the book, we do nothing and let it open normally!
             }
-            // If it IS a StashHolder/the book, we do nothing and let it open normally!
         }
     }
 
     private void openMysticalStash(Player player)
     {
-        File file = new File(this.getDataFolder(), player.getUniqueId() + ".yml");
-        FileConfiguration config = YamlConfiguration.loadConfiguration(file);
-        Inventory extraInv = Bukkit.createInventory(new StashHolder(), 54, "Mystical Stash");
-
-        for (int i = 0; i < extraInv.getSize(); ++i)
+        if(Enable_Mystical_Stash)
         {
-            extraInv.setItem(i, config.getItemStack("inventory." + i));
-        }
+            File file = new File(this.getDataFolder(), player.getUniqueId() + ".yml");
+            FileConfiguration config = YamlConfiguration.loadConfiguration(file);
+            Inventory extraInv = Bukkit.createInventory(new StashHolder(), 54, "Mystical Stash");
 
-        player.openInventory(extraInv);
+            for (int i = 0; i < extraInv.getSize(); ++i)
+            {
+                extraInv.setItem(i, config.getItemStack("inventory." + i));
+            }
+
+            player.openInventory(extraInv);
+        }
     }
 
     @EventHandler
     public void onInventoryClose(InventoryCloseEvent event)
     {
-        if (event.getView().getTitle().equals("Mystical Stash"))
+        if(Enable_Mystical_Stash)
         {
-            Player player = (Player) event.getPlayer();
-
-            ItemStack[] Contents = event.getInventory().getContents();
-            UUID PlayerUUID = player.getUniqueId();
-
-            //do the saving on a separate thread;
-            new BukkitRunnable()
+            if (event.getView().getTitle().equals("Mystical Stash"))
             {
-                @Override
-                public void run()
-                {
-                    Save_Stash_To_File(PlayerUUID, Contents, player.getName());
-                }
-            }.runTaskAsynchronously(this);
+                Player player = (Player) event.getPlayer();
 
+                ItemStack[] Contents = event.getInventory().getContents();
+                UUID PlayerUUID = player.getUniqueId();
+
+                //do the saving on a separate thread;
+                new BukkitRunnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        Save_Stash_To_File(PlayerUUID, Contents, player.getName());
+                    }
+                }.runTaskAsynchronously(this);
+
+            }
         }
     }
 
     private void Save_Stash_To_File(UUID PlayerUUID, ItemStack[] Contents, String Player_Name)
     {
-        File file = new File(this.getDataFolder(), PlayerUUID + ".yml");
-        FileConfiguration config = YamlConfiguration.loadConfiguration(file);
+        if(Enable_Mystical_Stash)
+        {
+            File file = new File(this.getDataFolder(), PlayerUUID + ".yml");
+            FileConfiguration config = YamlConfiguration.loadConfiguration(file);
 
-        for (int i = 0; i < Contents.length; ++i)
-        {
-            config.set("inventory." + i, Contents[i]);
-        }
+            for (int i = 0; i < Contents.length; ++i)
+            {
+                config.set("inventory." + i, Contents[i]);
+            }
 
-        try
-        {
-            config.save(file);
-        }
-        catch (IOException e)
-        {
-            this.getLogger().severe("Could not save stash for " + Player_Name + ": " + e.getMessage());
+            try
+            {
+                config.save(file);
+            }
+            catch (IOException e)
+            {
+                this.getLogger().severe("Could not save stash for " + Player_Name + ": " + e.getMessage());
+            }
         }
     }
     /////////////////////////////////////End of Mystical Stash//////////////////////////////////////
