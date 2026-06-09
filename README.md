@@ -50,4 +50,4 @@ Everything is **fully customizable**. From the welcome messages and player-speci
 ---
 ### **💡 Feature Requests & Support**
 Have a cool idea for a new feature? Want more stats in the Tab-list? Feature requests are always welcome! >
-Please use the Discussions tab here on Hangar to let me know what you'd like to see in the next update. I'm always looking to make VanillaPlus better for the community!
+Please use the Discussions tab here on GitHub to let me know what you'd like to see in the next update. I'm always looking to make VanillaPlus better for the community!
