@@ -1,6 +1,6 @@
 # VanillaPlus Configuration
 #do not change this version number!
-Config-Version: "1.0.1"
+Config-Version: "1.0.2"
 
 # ==========================================================
 #               Login msg's and fireworks
@@ -19,11 +19,31 @@ Show-Player-Specific-Login-Messages: true
 
 #Here we can set custom messages.
 Custom-Player-Messages:
-    muflafla: #<-- this one is for show.
+    muflafla: #<-- this is for my acc for show, You can delete it if u want.
         Player-UUID: "bbdf8cf3-020e-4367-96eb-52e459388de9"
         Custom-Messages:
             - "§aWelcome"
             - "§aHere again?"
+
+# ==========================================================
+#               Player Sleep
+# ==========================================================
+#If this is enabled you can set the amount of players by player/percentage for night skip to trigger
+Enable-Custom-Sleep: true
+#When sleep mode is set to FIXED it's a per player trigger else if it's set to PERCENTAGE its per percentage of players to trigger night skip
+Sleep-Mode : "FIXED"
+#Set the amount/percent of player for it to trigger night skip
+Sleep-Requirement: 1
+#Night skip msg if left blank no msg will appear
+Night-Skipped-Message : "§aThe night has been skipped!"
+# Set when player wakes up.
+# Common Choices:
+#  23000 - Early Twilight Wake (5:00 AM)
+#  0     - Default Minecraft Dawn (6:00 AM)
+#  1000  - Late Morning Wake (7:00 AM)
+Player-Wake-Time: 0
+# If true, sleeping will clear rain and thunder (Vanilla behavior). If false, the weather will stay exactly as it was.
+Clear-Weather-On-Sleep: true
 
 # ==========================================================
 #               Mystical Stash
@@ -37,9 +57,19 @@ Enable-Mystical-Stash: true
 Ban-On-Join: true
 Ban-Reason: "You where not whitelisted"
 # ==========================================================
-#                   creepers/enderman
+#                   creepers/enderman/phantoms/ghast
 # ==========================================================
+#If this is enabled phantoms wont spawn at all
+Disable-Phantom-Spawn: false
+
+#If this is enabled Ghast fireballs won't explode at all.
+Disable-Ghast-Explosions: false
+#If this is enabled it wil stop Ghast from blowing up blocks, but it wil still damage players.
+Disable-Ghast-Block-Damage: false
+#If this is enabled and a Ghast fireball explodes it will still damage the player and blow up blocks but give all the block back.
+Ghast-Gives-all-Blocks: true
 #If this is enabled creepers don't spawn at all
+
 Disable-Creeper-Spawn: false
 #If this is enabled creepers won't explode at all.
 Disable-Creeper-Explosions: false
@@ -47,6 +77,7 @@ Disable-Creeper-Explosions: false
 Disable-Creeper-Block-Damage: false
 #If this is enabled and a creeper explodes it will still damage the player and blow up blocks but give all the block back.
 Creeper-Gives-all-Blocks: true
+
 #If this is enabled it wil stop enderman from picking up blocks
 Stop-Enderman-From-Griefing: true
 # Set this to false to stop the Enderman messages from showing up.
@@ -109,8 +140,18 @@ Enable-Creepy-Stuff: false
 # ==========================================================
 #Enables the increased beacon radius
 Enable-Beacon-Changes: true
-#Sets the beacon radius
-Beacon-Radius: 150
+# How it scales based on your modifier value:
+#   Tier 1 (1 layer)  = 2x Modifier Value
+#   Tier 2 (2 layers) = 3x Modifier Value
+#   Tier 3 (3 layers) = 4x Modifier Value
+#   Tier 4 (4 layers) = 5x Modifier Value
+#
+# Examples:
+#   If set to 30: Tier 1 = 60 blocks, Tier 2 = 90,  Tier 3 = 120, Tier 4 = 150 (Recommended Max)
+#   If set to 20: Tier 1 = 40 blocks, Tier 2 = 60,  Tier 3 = 80,  Tier 4 = 100
+#   If set to 10: Tier 1 = 20 blocks, Tier 2 = 30,  Tier 3 = 40,  Tier 4 = 50  (Vanilla Ranges)
+# ============================================================================
+Beacon-Range-Modifier: 30
 
 # ==========================================================
 # CUSTOM RECIPE CONFIGURATION

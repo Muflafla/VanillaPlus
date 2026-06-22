@@ -60,11 +60,17 @@ public class BeaconManager implements Listener
     {
         Bukkit.getScheduler().runTaskTimer(this.plugin, () ->
         {
+            //If changes are disabled, skip updating and applying custom ranges entirely
+            if (!plugin.configLoader.Enable_Beacon_Changes)
+            {
+                return;
+            }
+
             this.updateBeaconStatuses();
 
             for (Player player : Bukkit.getOnlinePlayers())
             {
-                this.checkAndApplyBeaconEffect(player, (double) plugin.Beacon_Radius);
+                this.checkAndApplyBeaconEffect(player, (double) plugin.configLoader.BeaconRangeModifier);
             }
 
         }, 0L, 100L);
@@ -94,6 +100,11 @@ public class BeaconManager implements Listener
     @EventHandler
     public void onBeaconBreak(BlockBreakEvent event)
     {
+        //Do not modify or save tracking data if features are toggled off
+        if (!plugin.configLoader.Enable_Beacon_Changes)
+        {
+            return;
+        }
         if (event.getBlock().getType() == Material.BEACON)
         {
             Location loc = event.getBlock().getLocation();
@@ -116,6 +127,12 @@ public class BeaconManager implements Listener
     @EventHandler
     public void onBeaconClose(InventoryCloseEvent event)
     {
+        //Do not register new custom range beacons if disabled
+        if (!plugin.configLoader.Enable_Beacon_Changes)
+        {
+            return;
+        }
+
         Inventory inv = event.getInventory();
         if (inv.getType() == InventoryType.BEACON)
         {
@@ -194,23 +211,30 @@ public class BeaconManager implements Listener
                 int z = Integer.parseInt(parts[3]);
                 Location beaconLoc = new Location(world, x, y, z);
 
-                double squaredRange = range * range;
-                if(beaconLoc.distanceSquared(player.getLocation()) <= squaredRange && beaconLoc.getBlock().getType() == Material.BEACON)
+                if(beaconLoc.getBlock().getType() == Material.BEACON)
                 {
-                    boolean isActive = this.beaconConfig.getBoolean("beacons." + key + ".active", false);
-                    if (isActive)
+                    Beacon beacon = (Beacon) beaconLoc.getBlock().getState();
+                    int BeaconTier = beacon.getTier();
+                    double CalculatedRange = (BeaconTier * range) + range;
+
+                    double squaredRange = CalculatedRange * CalculatedRange;
+
+                    if(beaconLoc.distanceSquared(player.getLocation()) <= squaredRange)
                     {
-                        Beacon beacon = (Beacon) beaconLoc.getBlock().getState();
-                        PotionEffect effect = beacon.getPrimaryEffect();
-
-                        if (effect != null)
+                        boolean isActive = this.beaconConfig.getBoolean("beacons." + key + ".active", false);
+                        if (isActive)
                         {
-                            PotionEffectType effectType = effect.getType();
-                            PotionEffect current = player.getPotionEffect(effectType);
+                            PotionEffect effect = beacon.getPrimaryEffect();
 
-                            if (current == null || current.getDuration() < 100)
+                            if (effect != null)
                             {
-                                player.addPotionEffect(new PotionEffect(effectType, 120, 1, true, false));
+                                PotionEffectType effectType = effect.getType();
+                                PotionEffect current = player.getPotionEffect(effectType);
+
+                                if (current == null || current.getDuration() < 100)
+                                {
+                                    player.addPotionEffect(new PotionEffect(effectType, 120, 1, true, false));
+                                }
                             }
                         }
                     }

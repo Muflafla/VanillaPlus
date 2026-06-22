@@ -49,7 +49,7 @@ public class ConfigUpdater
             // 2. Wipe the old file out
             configFile.delete();
 
-            // 3. Save the brand new template from the resources jar
+            // 3. Save the brand-new template from the resources jar
             plugin.saveDefaultConfig();
             plugin.reloadConfig();
 

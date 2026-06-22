@@ -8,6 +8,7 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.*;
 import org.bukkit.BanList.Type;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
@@ -34,77 +35,47 @@ public class VanillaPlus extends JavaPlugin implements Listener
 {
     public int EndermanAmount = 0;
     public BukkitTask EndermanTask;
-    //setting up vars for the config to be written to im memory
-    public boolean Enable_Login_Fireworks;
-    public boolean Show_Login_Messages;
-    public boolean Show_Player_Specific_Login_Messages;
-    public boolean Ban_On_Join;
-    public String Ban_Reason;
-    public boolean Disable_Creeper_Spawn;
-    public boolean Disable_Creeper_Explosions;
-    public boolean Disable_Creeper_Block_Damage;
-    public boolean Creeper_Gives_all_Blocks;
-    public boolean Stop_Enderman_From_Griefing;
-    public boolean Show_Enderman_Messages;
-    public boolean Enable_Custom_Recipes;
-    public boolean Enable_Beacon_Changes;
-    public double Beacon_Radius;
-    public boolean Enable_Creepy_Stuff;
-    public boolean Enable_Mystical_Stash;
+    public BukkitTask creepyTask;
+
+    public ConfigLoader configLoader;
 
     @Override
     public void onEnable()
     {
-        // Check and update config to new version
+        //Create the updater and call it
         ConfigUpdater updater = new ConfigUpdater(this);
         updater.update();
+        //Create the config loader
+        this.configLoader = new ConfigLoader(this);
 
+        //register this plugin events
         Bukkit.getPluginManager().registerEvents(this, this);
+        //register the BeaconManager and also make it register events
         BeaconManager beaconManager = new BeaconManager(this);
         Bukkit.getPluginManager().registerEvents(beaconManager, this);
+        //register the SleepManager and also make it register events
+        SleepManager sleepManager = new SleepManager(this);
+        Bukkit.getPluginManager().registerEvents(sleepManager, this);
 
         String version = this.getDescription().getVersion();
         this.getLogger().warning("VanillaPlus Plugin Enabled! Version:" + version);
 
+
         //Load the config into memory.
-        Load_Config_Into_Vars();
+        configLoader.LoadAllVars();
+        //init the plugin
+        PluginInit();
+
+        //fire up the update checker
+        UpdateChecker checker = new UpdateChecker(this, "VanillaPlus");
+        checker.checkForUpdates();
     }
 
     ////////////////////////////////////////Load config in memory/////////////////////////////////////////////
-    public void Load_Config_Into_Vars()
+    public void PluginInit()
     {
-        //Check if Fireworks are enabled.
-        Enable_Login_Fireworks = getConfig().getBoolean("Enable-Login-Fireworks", true);
-        //Check if login messages are enabled.
-        Show_Login_Messages = getConfig().getBoolean("Show-Login-Messages", true);
-        //Check if specific login messages are enabled.
-        Show_Player_Specific_Login_Messages = getConfig().getBoolean("Show-Player-Specific-Login-Messages", true);
-        //Check if ban on join is enabled
-        Ban_On_Join = getConfig().getBoolean("Ban-On-Join", true);
-        //Get the ban reason
-        Ban_Reason = getConfig().getString("Ban-Reason", "You where not whitelisted");
-        //Check if Creeper spawn is disabled.
-        Disable_Creeper_Spawn = getConfig().getBoolean("Disable-Creeper-Spawn",false);
-        //Check if Creeper explosions are disabled.
-        Disable_Creeper_Explosions = getConfig().getBoolean("Disable-Creeper-Explosions",false);
-        //Check if Creeper block damage is disabled.
-        Disable_Creeper_Block_Damage = getConfig().getBoolean("Disable-Creeper-Block-Damage",false);
-        //Check if Creeper needs to give back all blocks it destroyed.
-        Creeper_Gives_all_Blocks = getConfig().getBoolean("Creeper-Gives-all-Blocks",false);
-        //Check if enderman need to stop griefing.
-        Stop_Enderman_From_Griefing = getConfig().getBoolean("Stop-Enderman-From-Griefing",true);
-        //Check if enderman msg's are enabled
-        Show_Enderman_Messages = getConfig().getBoolean("Show-Enderman-Messages",true);
-        //if true enable changed beacon radius
-        Enable_Beacon_Changes = getConfig().getBoolean("Enable-Beacon-Changes", true);
-        //set the new beacon range
-        Beacon_Radius = getConfig().getInt("Beacon-Radius", 150);
-        //if true enable creepy things
-        Enable_Creepy_Stuff = getConfig().getBoolean("Enable-Creepy-Stuff",false);
         //the timer checks if its enabled or not, this is needed for if it's changed in while server is on so timer knows to stop
         startCreepyTimer();
-        //if true enable mystical stash
-        Enable_Mystical_Stash = getConfig().getBoolean("Enable-Mystical-Stash",true);
 
 
         if(EndermanTask != null)
@@ -112,7 +83,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
             EndermanTask.cancel();
             EndermanTask = null;
         }
-        if (Show_Enderman_Messages)
+        if (this.configLoader.Show_Enderman_Messages)
         {
             // Task to broadcast Enderman griefing prevention stats
             EndermanTask = new BukkitRunnable()
@@ -151,8 +122,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
             }.runTaskTimer(this, 0L, 6000L);
         }
         //Check if custom recipes are enabled.
-        Enable_Custom_Recipes = getConfig().getBoolean("Enable-Custom-Recipes",true);
-        if(Enable_Custom_Recipes)
+        if(this.configLoader.Enable_Custom_Recipes)
         {
             //register the recipes.
             this.registerRecipes();
@@ -305,13 +275,12 @@ public class VanillaPlus extends JavaPlugin implements Listener
                 return true;
             }
 
-            // This is the magic line that refreshes the config memory
-            this.reloadConfig();
-
             //reload the recipes
             this.registerRecipes();
-            //reload the vars
-            Load_Config_Into_Vars();
+            //let the configloader get all the vars fresh from file
+            configLoader.LoadAllVars();
+            //init the plugin
+            PluginInit();
 
             sender.sendMessage("§aVanillaPlus configuration reloaded!");
             return true;
@@ -388,7 +357,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
     public void giveCustomBookIfMissing(PlayerJoinEvent event)
     {
         //check if enabled
-        if(Enable_Mystical_Stash)
+        if(this.configLoader.Enable_Mystical_Stash)
         {
             Player player = event.getPlayer();
             boolean hasBook = false;
@@ -436,7 +405,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event)
     {
-        if(Enable_Mystical_Stash)
+        if(this.configLoader.Enable_Mystical_Stash)
         {
             ItemStack item = event.getItem();
 
@@ -462,7 +431,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
     @EventHandler
     public void onInventoryOpen(InventoryOpenEvent event)
     {
-        if(Enable_Mystical_Stash)
+        if(this.configLoader.Enable_Mystical_Stash)
         {
             //check if the inv title is Mystical Stash
             if (event.getView().getTitle().equals("Mystical Stash"))
@@ -483,7 +452,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
 
     private void openMysticalStash(Player player)
     {
-        if(Enable_Mystical_Stash)
+        if(this.configLoader.Enable_Mystical_Stash)
         {
             File file = new File(this.getDataFolder(), player.getUniqueId() + ".yml");
             FileConfiguration config = YamlConfiguration.loadConfiguration(file);
@@ -501,7 +470,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
     @EventHandler
     public void onInventoryClose(InventoryCloseEvent event)
     {
-        if(Enable_Mystical_Stash)
+        if(this.configLoader.Enable_Mystical_Stash)
         {
             if (event.getView().getTitle().equals("Mystical Stash"))
             {
@@ -526,7 +495,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
 
     private void Save_Stash_To_File(UUID PlayerUUID, ItemStack[] Contents, String Player_Name)
     {
-        if(Enable_Mystical_Stash)
+        if(this.configLoader.Enable_Mystical_Stash)
         {
             File file = new File(this.getDataFolder(), PlayerUUID + ".yml");
             FileConfiguration config = YamlConfiguration.loadConfiguration(file);
@@ -553,7 +522,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
     public void onPlayerPreJoin(AsyncPlayerPreLoginEvent event)
     {
         //Check if ban on join is enabled
-        if(Ban_On_Join)
+        if(this.configLoader.Ban_On_Join)
         {
             //get the uuid of the player about to be banned
             UUID playerUuid = event.getUniqueId();
@@ -566,7 +535,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
                 if (!Bukkit.getBannedPlayers().contains(offlinePlayer))
                 {
                     //Do the actual ban
-                    Bukkit.getBanList(Type.PROFILE).addBan(playerUuid.toString(), Ban_Reason, null, null);
+                    Bukkit.getBanList(Type.PROFILE).addBan(playerUuid.toString(), this.configLoader.Ban_Reason, null, null);
                     //Send a msg to console and all players
                     String Fresh_Ban_MSG = "Fresh BAN Event Triggered for player by name: " + Banned_Player_Name;
                     this.getLogger().warning(Fresh_Ban_MSG);
@@ -597,11 +566,11 @@ public class VanillaPlus extends JavaPlugin implements Listener
         final Player player = event.getPlayer();
 
         //if true show login msg's
-        if (Show_Login_Messages)
+        if (this.configLoader.Show_Login_Messages)
         {
             boolean customMessageSent = false;
             //if true try to send a custom msg to this player first
-            if (Show_Player_Specific_Login_Messages)
+            if (this.configLoader.Show_Player_Specific_Login_Messages)
             {
                 //get the Custom Player messages
                 ConfigurationSection Custom_Player_Messages = getConfig().getConfigurationSection("Custom-Player-Messages");
@@ -660,7 +629,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
         }
 
         //if true launch fireworks upon join
-        if(Enable_Login_Fireworks)
+        if(this.configLoader.Enable_Login_Fireworks)
         {
             this.spawnWelcomeFireworks(player);
         }
@@ -710,9 +679,16 @@ public class VanillaPlus extends JavaPlugin implements Listener
     public void onEntitySpawn(EntitySpawnEvent event)
     {
         //if true stop creepers from spawning.
-        if (Disable_Creeper_Spawn)
+        if (this.configLoader.Disable_Creeper_Spawn)
         {
             if (event.getEntityType().equals(EntityType.CREEPER))
+            {
+                event.setCancelled(true);
+            }
+        }
+        if(this.configLoader.Disable_Phantom_Spawn)
+        {
+            if (event.getEntityType().equals(EntityType.PHANTOM))
             {
                 event.setCancelled(true);
             }
@@ -722,7 +698,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
     public void ExplosionPrime(ExplosionPrimeEvent event)
     {
         //if true stop creepers from exploding.
-        if (Disable_Creeper_Explosions)
+        if (this.configLoader.Disable_Creeper_Explosions)
         {
             if (event.getEntityType() == EntityType.CREEPER)
             {
@@ -747,7 +723,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
     public void onEntityExplode(EntityExplodeEvent event)
     {
         //if true disable creepers from doing block damage.
-        if (Disable_Creeper_Block_Damage)
+        if (this.configLoader.Disable_Creeper_Block_Damage)
         {
             if (event.getEntityType() == EntityType.CREEPER)
             {
@@ -757,7 +733,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
             }
         }
         //if true make it so creepers give back all blocks they destroy
-        if (Creeper_Gives_all_Blocks)
+        if (this.configLoader.Creeper_Gives_all_Blocks)
         {
             this.getLogger().warning("creeper returns all blocks");
             if (event.getEntityType() == EntityType.CREEPER)
@@ -766,13 +742,78 @@ public class VanillaPlus extends JavaPlugin implements Listener
             }
         }
 
+        //check for fireballs
+        if (event.getEntityType() == EntityType.FIREBALL)
+        {
+            //check if it's a large fireball
+            if (event.getEntity() instanceof LargeFireball fireball)
+            {
+                //check if a ghast shot it
+                if (fireball.getShooter() instanceof org.bukkit.entity.Ghast)
+                {
+                    if(this.configLoader.Disable_Ghast_Explosions)
+                    {
+                        event.setCancelled(true);
+
+                        //Get enitiy event location if entity is null because out of render distance then get event location so we always have a location
+                        Location loc = (event.getEntity() != null) ? event.getEntity().getLocation() : event.getLocation();
+                        World world = loc.getWorld();
+                        if (world !=null)
+                        {
+                            //For maximum fun do a random pitch every time
+                            float randomPitch = 0.5f + (float) Math.random();
+                            world.playSound(loc,Sound.ENTITY_CHICKEN_EGG,1.0f,randomPitch);
+                            fireball.remove();
+                        }
+                    }
+                    else if(this.configLoader.Disable_Ghast_Block_Damage)
+                    {
+                        //clear block list so no blocks get destroyed
+                        event.blockList().clear();
+                    }
+                    else if (this.configLoader.Ghast_Gives_all_Blocks)
+                    {
+                        event.setYield(100.0f);
+
+                        // 1. Create a list to remember all block locations that are exploding
+                        java.util.List<Location> explodedLocations = new java.util.ArrayList<>();
+                        for (Block block : event.blockList())
+                        {
+                            explodedLocations.add(block.getLocation());
+                        }
+
+                        // 2. Wait 1 tick for the explosion to complete and spawn its fire blocks
+                        Bukkit.getScheduler().runTaskLater(this, () ->
+                        {
+                            for (Location loc : explodedLocations)
+                            {
+                                Block block = loc.getBlock();
+                                Block above = block.getRelative(org.bukkit.block.BlockFace.UP);
+
+                                // Snuff out fire inside the exploded crater hole
+                                if (block.getType() == Material.FIRE)
+                                {
+                                    block.setType(Material.AIR);
+                                }
+
+                                // Snuff out fire sitting on the rim/edge of the crater
+                                if (above.getType() == Material.FIRE)
+                                {
+                                    above.setType(Material.AIR);
+                                }
+                            }
+                        }, 1L);
+                    }
+                }
+            }
+        }
     }
 
     @EventHandler
     public void onEntityChangeBlock(EntityChangeBlockEvent event)
     {
         //if true stops enderman from griefing.
-        if (Stop_Enderman_From_Griefing)
+        if (this.configLoader.Stop_Enderman_From_Griefing)
         {
             if (event.getEntityType() == EntityType.ENDERMAN)
             {
@@ -798,7 +839,6 @@ public class VanillaPlus extends JavaPlugin implements Listener
         return players.get(randomIndex);
     }
 
-    private BukkitTask creepyTask;
     public void startCreepyTimer()
     {
         //Check if a timer is not already running.
@@ -807,7 +847,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
             this.creepyTask.cancel();
         }
         //Check if we need to run a fresh timer.
-        if(Enable_Creepy_Stuff)
+        if(this.configLoader.Enable_Creepy_Stuff)
         {
             //Run this every 10 to 20 minutes (12000 to 24000 ticks)
             this.creepyTask = new BukkitRunnable()
@@ -815,10 +855,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
                 @Override
                 public void run()
                 {
-                    if (Enable_Creepy_Stuff)
-                    {
-                        TriggerCreepyEvents();
-                    }
+                    TriggerCreepyEvents();
                 }
             }.runTaskTimer(this, 200L, 12000L);
         }
@@ -827,7 +864,7 @@ public class VanillaPlus extends JavaPlugin implements Listener
     public void onPlayerBed(PlayerBedEnterEvent event)
     {
         //Check if this feature is enabled first.
-        if (Enable_Creepy_Stuff)
+        if (this.configLoader.Enable_Creepy_Stuff)
         {
             //Return the lucky (or unlucky) winner.
             Player bedPlayer = Player_Picker();
