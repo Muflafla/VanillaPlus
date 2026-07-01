@@ -1,6 +1,5 @@
 name: VanillaPlus
 version: '${version}'
-
 main: BK.vanilaPlus.VanillaPlus
 api-version: '1.21'
 load: POSTWORLD
@@ -10,3 +9,18 @@ commands:
     description: Reloads the VanillaPlus configuration.
     permission: VanillaPlus.reload
     default: op # This means only Ops can use it by default
+  vp-setspawn:
+    description: Set the world spawn to your current location
+    permission: VanillaPlus.spawn
+    default: op # This means only Ops can use it by default
+    usage: /vp-setspawn
+  vp-stash:
+    description: Inspects a player's virtual stash.
+    permission: VanillaPlus.stash
+    default: op # This means only Ops can use it by default
+    usage: /vp-stash <player>
+  vp-hud:
+    description: Toggle your scoreboard HUD elements
+    permission: VanillaPlus.hud
+    default: true # This allows ALL players to use it by default!
+    usage: /vp-hud <deaths | sleep | ping> [ 0 | 1 | 2 ]

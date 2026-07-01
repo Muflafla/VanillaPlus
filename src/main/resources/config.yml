@@ -1,6 +1,6 @@
 # VanillaPlus Configuration
 #do not change this version number!
-Config-Version: "1.0.2"
+Config-Version: "1.0.3"
 
 # ==========================================================
 #               Login msg's and fireworks
@@ -30,10 +30,14 @@ Custom-Player-Messages:
 # ==========================================================
 #If this is enabled you can set the amount of players by player/percentage for night skip to trigger
 Enable-Custom-Sleep: true
+#if this is enabled all players will have there TIME_SINCE_REST set to 0 when the night is skipped
+All-Players-Rest: true
 #When sleep mode is set to FIXED it's a per player trigger else if it's set to PERCENTAGE its per percentage of players to trigger night skip
 Sleep-Mode : "FIXED"
 #Set the amount/percent of player for it to trigger night skip
 Sleep-Requirement: 1
+#Enable this to show the amount of players needed to trigger sleep as an Actionbar msg
+ActionBar-Player-Message: true
 #Night skip msg if left blank no msg will appear
 Night-Skipped-Message : "§aThe night has been skipped!"
 # Set when player wakes up.
@@ -48,8 +52,10 @@ Clear-Weather-On-Sleep: true
 # ==========================================================
 #               Mystical Stash
 # ==========================================================
-#this enables use of the Mystical Stash
+#This enables use of the Mystical Stash
 Enable-Mystical-Stash: true
+#This enables the use of a chest named Mystical Stash to open your stash
+Enable-Mystical-Stash-Chests: true
 # ==========================================================
 #                   AUTO BAN FEATURE
 # ==========================================================

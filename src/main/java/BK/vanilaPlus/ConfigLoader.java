@@ -20,8 +20,10 @@ public class ConfigLoader
     public boolean Stop_Enderman_From_Griefing;
     public boolean Show_Enderman_Messages;
     public boolean Enable_Custom_Recipes;
-    public boolean Enable_Creepy_Stuff;
+
+    //Mystical Stash Vars
     public boolean Enable_Mystical_Stash;
+    public boolean Enable_Mystical_Stash_Chests;
 
     //BeaconManager Vars
     public boolean Enable_Beacon_Changes;
@@ -29,11 +31,16 @@ public class ConfigLoader
 
     //SleepManager Vars
     public boolean EnableCustomSleep;
+    public boolean AllPlayersRest;
     public int PlayerWakeTime;
     public String Sleep_Mode;
     public int Requirements;
+    public boolean ActionBarMSG;
     public String Night_Skipped_MSG;
     public boolean ClearWeatherOnSleep;
+
+    //Horror and fun
+    public boolean Enable_Creepy_Stuff;
 
     public ConfigLoader(VanillaPlus plugin)
     {
@@ -77,10 +84,12 @@ public class ConfigLoader
         this.Stop_Enderman_From_Griefing = plugin.getConfig().getBoolean("Stop-Enderman-From-Griefing",true);
         //Check if enderman msg's are enabled
         this.Show_Enderman_Messages = plugin.getConfig().getBoolean("Show-Enderman-Messages",true);
-        //if true enable creepy things
-        this.Enable_Creepy_Stuff = plugin.getConfig().getBoolean("Enable-Creepy-Stuff",false);
+
+        //================== load all the Mystical Stash Vars =============================
         //if true enable mystical stash
         this.Enable_Mystical_Stash = plugin.getConfig().getBoolean("Enable-Mystical-Stash",true);
+        //if true allow chests named Mystical Stash to open the Mystical Stash
+        this.Enable_Mystical_Stash_Chests = plugin.getConfig().getBoolean("Enable-Mystical-Stash-Chests",true);
 
         //================== load all the BeaconManger Vars =============================
         //if true enable changed beacon radius
@@ -90,12 +99,16 @@ public class ConfigLoader
 
         //======================== load all the SleepManager Vars =============================
         this.EnableCustomSleep = plugin.getConfig().getBoolean("Enable-Custom-Sleep",true);
+        this.AllPlayersRest = plugin.getConfig().getBoolean("All-Players-Rest",true);
         this.PlayerWakeTime = plugin.getConfig().getInt("Player-Wake-Time");
         this.Sleep_Mode = plugin.getConfig().getString("Sleep-Mode","FIXED");
         this.Requirements = plugin.getConfig().getInt("Sleep-Requirement", 1);
+        this.ActionBarMSG = plugin.getConfig().getBoolean("ActionBar-Player-Message", true);
         this.Night_Skipped_MSG = plugin.getConfig().getString("Night-Skipped-Message");
         this.ClearWeatherOnSleep = plugin.getConfig().getBoolean("Clear-Weather-On-Sleep",true);
 
-
+        //======================== load all the Horror and Fun Vars =============================
+        //if true enable creepy things
+        this.Enable_Creepy_Stuff = plugin.getConfig().getBoolean("Enable-Creepy-Stuff",false);
     }
 }
