@@ -1,0 +1,19 @@
+# =================================================================================
+# CUSTOM MINI BLOCKS
+# =================================================================================
+# Add your own custom blocks here!
+#
+# IMPORTANT RULES:
+# 1. Every top-level key (e.g., 'my_custom_block') must be UNIQUE.
+#    Do not use the same name twice!
+# 2. Follow the format strictly:
+#
+# my_custom_block:
+#     display-name: "My Custom Block Name"
+#     input-material: "STONE"
+#     amount: 1
+#     texture-hash: "..."
+# =================================================================================
+
+custom-mini-blocks:
+# Add your blocks below this line

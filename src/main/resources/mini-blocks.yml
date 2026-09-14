@@ -1,0 +1,1944 @@
+#Do not change this version number!
+Mini-Blocks-Version: "1.0.4"
+
+#Do not add your own blocks inside this config!
+#Use the 'custom-mini-blocks.yml' file instead.
+mini-blocks:
+  #========================================================================================================================================================================================================
+  #                                       --- WOODS ---
+  #========================================================================================================================================================================================================
+  mini_oak_planks:
+    display-name: "Mini Oak Planks"
+    input-material: "OAK_PLANKS"
+    amount: 4
+    texture-hash: "cf48cf0d3df2da302e5aae780a8e680627b9c33c8bd96e8c9d542c29947b7294"
+
+  mini_spruce_planks:
+    display-name: "Mini Spruce Planks"
+    input-material: "SPRUCE_PLANKS"
+    amount: 4
+    texture-hash: "10eb1968ff2da6bca68f59b6111713e08d22499229e1086449cba50f7de64ae"
+
+  mini_birch_planks:
+    display-name: "Mini Birch Planks"
+    input-material: "BIRCH_PLANKS"
+    amount: 4
+    texture-hash: "e2f261a2209fe324934ac8042730b5dc8d96db1d489b65dcb2b059654728cb4a"
+
+  mini_jungle_planks:
+    display-name: "Mini Jungle Planks"
+    input-material: "JUNGLE_PLANKS"
+    amount: 4
+    texture-hash: "93d9857641a11f37446dc6a643cbc94c797caf214f23344ef02d9c30e557e57a"
+
+  mini_acacia_planks:
+    display-name: "Mini Acacia Planks"
+    input-material: "ACACIA_PLANKS"
+    amount: 4
+    texture-hash: "ef24c81b17118102e02ca297693d61a15dd3bc68a17f3d1947ee639712168f9c"
+
+  mini_dark_oak_planks:
+    display-name: "Mini Dark Oak Planks"
+    input-material: "DARK_OAK_PLANKS"
+    amount: 4
+    texture-hash: "368d2d57542d8062825f1777f4e64eac0c24bee8d34162e840b1d995b61e0cc2"
+
+  mini_mangrove_planks:
+    display-name: "Mini Mangrove Planks"
+    input-material: "MANGROVE_PLANKS"
+    amount: 4
+    texture-hash: "100fd59fcde19f34c94c633c06c17d4d936fb1df3df01dbacd5ad44a500930c"
+
+  mini_cherry_planks:
+    display-name: "Mini Cherry Planks"
+    input-material: "CHERRY_PLANKS"
+    amount: 4
+    texture-hash: "eea720596d8c82e034c1d25f40f68ce1811baee6717b21d6009765fb2ba5e9fd"
+
+  mini_bamboo_planks:
+    display-name: "Mini Bamboo Planks"
+    input-material: "BAMBOO_PLANKS"
+    amount: 4
+    texture-hash: "5615ebea7850e9d7b50b968e0099ef93256625781210f02ae9d5081f86b70463"
+
+  mini_bamboo_mosaic:
+    display-name: "Mini Bamboo Mosaic"
+    input-material: "BAMBOO_MOSAIC"
+    amount: 4
+    texture-hash: "1a7a6e7845d667f829299c791757d1106551787dcbd8cba7ebf083e5ca980df5"
+
+  mini_crimson_planks:
+    display-name: "Mini Crimson Planks"
+    input-material: "CRIMSON_PLANKS"
+    amount: 4
+    texture-hash: "47e4c05b51beb526c739004f294c88c5b8ad88610172b84b50031bbd286c57b0"
+
+  mini_warped_planks:
+    display-name: "Mini Warped Planks"
+    input-material: "WARPED_PLANKS"
+    amount: 4
+    texture-hash: "e9f3d98e2b5075a1581901b22d6a43ecf40ca37112ffef1d9ea40068ba4022ca"
+
+  mini_pale_oak_planks_CHECK:
+    display-name: "Mini Pale Oak Planks"
+    input-material: "PALE_OAK_PLANKS"
+    amount: 4
+    texture-hash: "f612c19d26c0a7d5caaf4adfa253d90a320d990aad91bde015cdcfac85ca6944"
+
+  #========================================================================================================================================================================================================
+  #                                       --- WOOD LOGS & STEMS ---
+  #========================================================================================================================================================================================================
+  mini_oak_log:
+    display-name: "Mini Oak Log"
+    input-material: "OAK_LOG"
+    amount: 4
+    texture-hash: "6d2e310879a6450af5625bcd45093dd7e5d8f827ccbfeac69c81537768406b"
+
+  mini_oak_log_rounded:
+    display-name: "Mini Oak Log Rounded"
+    input-material: "OAK_LOG"
+    amount: 4
+    texture-hash: "5ae826e7db8447fbd62988fee0e83bbdd694378aef12d2572e975f059a54990"
+
+  mini_oak_log_sideWays:
+    display-name: "Mini Oak Log SideWays"
+    input-material: "OAK_LOG"
+    amount: 4
+    texture-hash: "54aada4d9fceda90186918d6ca35b9a0ead8e4b14c9d9427157ee9b9339d7b1"
+
+  mini_oak_log_sideWays_rounded:
+    display-name: "Mini Oak Log SideWays Rounded"
+    input-material: "OAK_LOG"
+    amount: 4
+    texture-hash: "20cd13223a8d9c173cedce6c4bebeba06a24a1ba275dd3eb5c7933f9a74ba011"
+
+  mini_stripped_oak_log:
+    display-name: "Mini Stripped Oak Log"
+    input-material: "STRIPPED_OAK_LOG"
+    amount: 4
+    texture-hash: "a488ea7ee538a053678e7037ed024e66e47d8838f9ec7fd86e46b034bff14c1d"
+
+  mini_stripped_oak_log_sideWays:
+    display-name: "Mini Stripped Oak Log SideWays"
+    input-material: "STRIPPED_OAK_LOG"
+    amount: 4
+    texture-hash: "5c5686de157ff44a4811daeb6aa2af33f266fba2fabe49695d37d05f27632755"
+
+  mini_dark_oak_log:
+    display-name: "Mini Dark Oak Log"
+    input-material: "DARK_OAK_LOG"
+    amount: 4
+    texture-hash: "db6afc504df12f6c8cea43bfae0ef185f8dad83a7d8a7c74a81cef207f7a2e0"
+
+  mini_dark_oak_log_rounded:
+    display-name: "Mini Dark Oak Log Rounded"
+    input-material: "DARK_OAK_LOG"
+    amount: 4
+    texture-hash: "f0ec6cf3fcb59fb63621442d2130bd9b82480d4d73d9a0775fd38992195d49ae"
+
+  mini_dark_oak_log_sideWays:
+    display-name: "Mini Dark Oak Log SideWays"
+    input-material: "DARK_OAK_LOG"
+    amount: 4
+    texture-hash: "2ff644f913935a2bff83b2f32e138a18872b56aac03460f01a83f762209e5010"
+
+  mini_dark_oak_log_sideWays_rounded:
+    display-name: "Mini Dark Oak Log SideWays Rounded"
+    input-material: "DARK_OAK_LOG"
+    amount: 4
+    texture-hash: "23511c54fc9adaa6b1c5beeb67d162978ccd31dc88a93b26af896f4073763bf7"
+
+  mini_stripped_dark_oak_log:
+    display-name: "Mini Stripped Dark Oak Log"
+    input-material: "STRIPPED_DARK_OAK_LOG"
+    amount: 4
+    texture-hash: "b3ebeb4b2b80eb82eb4f42cd9278c21aaf124c6c695ba3fd8ed62c65ae624ad9"
+
+  mini_stripped_dark_oak_log_sideWays:
+    display-name: "Mini Stripped Dark Oak Log SideWays"
+    input-material: "STRIPPED_DARK_OAK_LOG"
+    amount: 4
+    texture-hash: "c407039722b65e4f34dc58dece36d1e8dcff26e42923e0196459cdbf59330e40"
+
+  mini_pale_oak_log:
+    display-name: "Mini Pale Oak Log"
+    input-material: "PALE_OAK_LOG"
+    amount: 4
+    texture-hash: "9b536a6cf12f7e9d562fd2205d658fbd3d6855f69412119eeefcbc8fdc793152"
+
+  mini_pale_oak_log_sideWays:
+    display-name: "Mini Pale Oak Log SideWays"
+    input-material: "PALE_OAK_LOG"
+    amount: 4
+    texture-hash: "5207e065142bb5796e89d4e06132a9009780a445a599d600b2b97aa0235ebd3f"
+
+  mini_stripped_pale_oak_log:
+    display-name: "Mini Stripped Pale Oak Log"
+    input-material: "STRIPPED_PALE_OAK_LOG"
+    amount: 4
+    texture-hash: "cf2bc8e9d9b07966f7ca77b6ab86dc1052d3c1cdc8e8d5e615eca695456c7f34"
+
+  mini_stripped_pale_oak_log_sideWays:
+    display-name: "Mini Stripped Pale Oak Log SideWays"
+    input-material: "STRIPPED_PALE_OAK_LOG"
+    amount: 4
+    texture-hash: "878fce1498c05a84039b7ac474360c38574f40bfb9045d05aee070d994eb1ea0"
+
+  mini_acacia_log:
+    display-name: "Mini Acacia Log"
+    input-material: "ACACIA_LOG"
+    amount: 4
+    texture-hash: "e6669fe2dbf78792a3e191622a8ed1f9eb803f8826c9b949d0dc15a51c59391"
+
+  mini_acacia_log_rounded:
+    display-name: "Mini Acacia Log Rounded"
+    input-material: "ACACIA_LOG"
+    amount: 4
+    texture-hash: "fdef1ef7881da439e33fc18730c3915bacee85c4105e68d1b410a2499d5bb2db"
+
+  mini_acacia_log_sideWays:
+    display-name: "Mini Acacia Log SideWays"
+    input-material: "ACACIA_LOG"
+    amount: 4
+    texture-hash: "d3b85c6ee5322fa8a513b866d11344bd21fa5ffa1accb2b06548f65480d159f9"
+
+  mini_acacia_log_sideWays_rounded:
+    display-name: "Mini Acacia Log SideWays Rounded"
+    input-material: "ACACIA_LOG"
+    amount: 4
+    texture-hash: "78872537b6ce574659dc176a1d8dfe9c1e599f6f141c1822628347dd538b9e2"
+
+  mini_stripped_acacia_log:
+    display-name: "Mini Stripped Acacia Log"
+    input-material: "STRIPPED_ACACIA_LOG"
+    amount: 4
+    texture-hash: "e48c5f0a1fc9ec1a958d6738fa53aa425f224cd952c983df7698da092d132d78"
+
+  mini_stripped_acacia_log_sideWays:
+    display-name: "Mini Stripped Acacia Log SideWays"
+    input-material: "STRIPPED_ACACIA_LOG"
+    amount: 4
+    texture-hash: "9780c8dc16e178f6eaf15e0353b0aee9b58b695d6d7fac12d6689ace105515d7"
+
+  mini_spruce_log:
+    display-name: "Mini Spruce Log"
+    input-material: "SPRUCE_LOG"
+    amount: 4
+    texture-hash: "9f4af289825e127dac32208b1e0389a927ef405597b6c9a64cef03f21d9273b5"
+
+  mini_spruce_log_rounded:
+    display-name: "Mini Spruce Log Rounded"
+    input-material: "SPRUCE_LOG"
+    amount: 4
+    texture-hash: "300fc72e90b748dc2936c4093d62a22fef9c937ef83c70ca76bcd500b4421c0b"
+
+  mini_spruce_log_sideWays:
+    display-name: "Mini Spruce Log SideWays"
+    input-material: "SPRUCE_LOG"
+    amount: 4
+    texture-hash: "61b0340a550f56062bc972b79ed8546652a6287cd57510ef8b3ae49771d6e408"
+
+  mini_spruce_log_sideWays_rounded:
+    display-name: "Mini Spruce Log SideWays Rounded"
+    input-material: "SPRUCE_LOG"
+    amount: 4
+    texture-hash: "59bd45aad69bd305c55d7c93b1b34f2f47dca8af2e064b2bf5b8dbe09f54a0b8"
+
+  mini_stripped_spruce_log:
+    display-name: "Mini Stripped Spruce Log"
+    input-material: "STRIPPED_SPRUCE_LOG"
+    amount: 4
+    texture-hash: "8fbd2f7b00c2bfed03f5ae2d7131f9e52549930b7b7d3a51838fdddef89746b1"
+
+  mini_stripped_spruce_log_sideWays:
+    display-name: "Mini Stripped Spruce Log SideWays"
+    input-material: "STRIPPED_SPRUCE_LOG"
+    amount: 4
+    texture-hash: "52a89a3264d1b0aa99df67b4dd147ccab8f7e00ad8dccc0b46063077d31e9f87"
+
+  mini_birch_log:
+    display-name: "Mini Birch Log"
+    input-material: "BIRCH_LOG"
+    amount: 4
+    texture-hash: "6cb0922084bda6d721ba94b0ee9636137b6e722640944651fd3a5d799ae75650"
+
+  mini_birch_log_rounded:
+    display-name: "Mini Birch Log Rounded"
+    input-material: "BIRCH_LOG"
+    amount: 4
+    texture-hash: "34d8918e789454cacd6639a48059a5ce779f2d9efade363398f4dfd5128634"
+
+  mini_birch_log_sideWays:
+    display-name: "Mini Birch Log SideWays"
+    input-material: "BIRCH_LOG"
+    amount: 4
+    texture-hash: "54ff52f424083bf97b6484ac82e51f3c327dd5e43a4cdf3016deb9cf05cb7382"
+
+  mini_birch_log_sideWays_rounded:
+    display-name: "Mini Birch Log SideWays Rounded"
+    input-material: "BIRCH_LOG"
+    amount: 4
+    texture-hash: "cf53289c232623b9a7ca7fbe6d42bfa81a1c1c7c6ccec37c177f64d73df2d1f9"
+
+  mini_stripped_birch_log:
+    display-name: "Mini Stripped Birch Log"
+    input-material: "STRIPPED_BIRCH_LOG"
+    amount: 4
+    texture-hash: "e1cde355026d12b3708a4ab77519b7746b6bb2bd581e3276dc33fe22617e4b79"
+
+  mini_stripped_birch_log_sideWays:
+    display-name: "Mini Stripped Birch Log SideWays"
+    input-material: "STRIPPED_BIRCH_LOG"
+    amount: 4
+    texture-hash: "4b182c7e835ef81a6fe7657abcbb6a6db97aa642168d0f4edd354ceca8f39420"
+
+  mini_jungle_log:
+    display-name: "Mini Jungle Log"
+    input-material: "JUNGLE_LOG"
+    amount: 4
+    texture-hash: "3023514b28859132946acfff53c55d61cb3e1b4706049b25a8ffea35df33b4a4"
+
+  mini_jungle_log_rounded:
+    display-name: "Mini Jungle Log Rounded"
+    input-material: "JUNGLE_LOG"
+    amount: 4
+    texture-hash: "2d1965a5320bfff14d99d6804442cb33287af6ac8d4b4efde07ad4263d3be875"
+
+  mini_jungle_log_sideWays:
+    display-name: "Mini Jungle Log SideWays"
+    input-material: "JUNGLE_LOG"
+    amount: 4
+    texture-hash: "997655da23d42e1a1c41da389aa9a152d7e9f6adcde972296db244ed82560956"
+
+  mini_jungle_log_sideWays_rounded:
+    display-name: "Mini Jungle Log SideWays Rounded"
+    input-material: "JUNGLE_LOG"
+    amount: 4
+    texture-hash: "d954a3ad41c9f83ff0a565b2e4664fc5739387abd8a80acecf420b67e4983408"
+
+  mini_stripped_jungle_log:
+    display-name: "Mini Stripped Jungle Log"
+    input-material: "STRIPPED_JUNGLE_LOG"
+    amount: 4
+    texture-hash: "967344975256fc7e8c4e6c9c674ee8e118eaf125c79e48052aa17558d19d1fa"
+
+  mini_stripped_jungle_log_sideWays:
+    display-name: "Mini Stripped Jungle Log SideWays"
+    input-material: "STRIPPED_JUNGLE_LOG"
+    amount: 4
+    texture-hash: "7acebd288d76728d66973ff007a0d262d9152ce04d1d42ed3e4bfabf313da421"
+
+  mini_mangrove_log:
+    display-name: "Mini Mangrove Log"
+    input-material: "MANGROVE_LOG"
+    amount: 4
+    texture-hash: "3d9a10751cbe2c3e0d68c885b726c082329f1f2e17a5c5121a7cfc16b5956384"
+
+  mini_mangrove_log_rounded:
+    display-name: "Mini Mangrove Log Rounded"
+    input-material: "MANGROVE_LOG"
+    amount: 4
+    texture-hash: "dff103957962816337cc24b0080d3fe2bca287088402aa0c56b163726950aa6b"
+
+  mini_mangrove_log_sideWays:
+    display-name: "Mini Mangrove Log SideWays"
+    input-material: "MANGROVE_LOG"
+    amount: 4
+    texture-hash: "f59d0360e26260d8cd6dab008f4d178896fbcac22726d40e5a228d444aa8cd01"
+
+  mini_mangrove_log_sideWays_rounded:
+    display-name: "Mini Mangrove Log SideWays Rounded"
+    input-material: "MANGROVE_LOG"
+    amount: 4
+    texture-hash: "c1761e379c88b2c848726e418623f12b06668f4ae2ff748480beb886419148cb"
+
+  mini_stripped_mangrove_log:
+    display-name: "Mini Stripped Mangrove Log"
+    input-material: "STRIPPED_MANGROVE_LOG"
+    amount: 4
+    texture-hash: "999119e1dbcc4ae3fd315898f5be7414c050a1d4fd136e5ca12845b413a46984"
+
+  mini_stripped_mangrove_log_sideWays:
+    display-name: "Mini Stripped Mangrove Log SideWays"
+    input-material: "STRIPPED_MANGROVE_LOG"
+    amount: 4
+    texture-hash: "e2d5f37de0c8bd5a446d8dacc3894288e4a5e453d84bcf55bea34f62bb141b87"
+
+  mini_cherry_log:
+    display-name: "Mini Cherry Log"
+    input-material: "CHERRY_LOG"
+    amount: 4
+    texture-hash: "dfa8285551d16a18d67260a89db60d5544ccd1dc9c8ecdd297c31b4f9546bc43"
+
+  mini_cherry_log_rounded:
+    display-name: "Mini Cherry Log Rounded"
+    input-material: "CHERRY_LOG"
+    amount: 4
+    texture-hash: "39f4a3283d6b6d96e2aed8faeaf995ce200c9e0a95043116005fa97f69e3e21b"
+
+  mini_cherry_log_sideWays:
+    display-name: "Mini Cherry Log SideWays"
+    input-material: "CHERRY_LOG"
+    amount: 4
+    texture-hash: "103d135333fd9eb9ff039c10364b97b16d9e779748caa1beaf1b75edf00c9a48"
+
+  mini_cherry_log_sideWays_rounded:
+    display-name: "Mini Cherry Log SideWays Rounded"
+    input-material: "CHERRY_LOG"
+    amount: 4
+    texture-hash: "ee86a05f3133bfc950d7d9d41b6b9c765f690b9ca99804dc55ef216ae92a87e8"
+
+  mini_stripped_cherry_log:
+    display-name: "Mini Stripped Cherry Log"
+    input-material: "STRIPPED_CHERRY_LOG"
+    amount: 4
+    texture-hash: "b56c04e5c72d4c5fbd6316835a452f001c20e84d2ddbee84c644705844b4f471"
+
+  mini_stripped_cherry_log_sideWays:
+    display-name: "Mini Stripped Cherry Log SideWays"
+    input-material: "STRIPPED_CHERRY_LOG"
+    amount: 4
+    texture-hash: "12ce483777ffae246e6010564cdf9aa2bdf081cd24362fae75fe4e1a028387db"
+
+  mini_bamboo_block:
+    display-name: "Mini Bamboo Block"
+    input-material: "BAMBOO_BLOCK"
+    amount: 4
+    texture-hash: "3ac16b07d3017d159be7ab31185d8490f816aed00fac482f12e33a4d7cfe8f51"
+
+  mini_stripped_bamboo_block:
+    display-name: "Mini Stripped Bamboo Block"
+    input-material: "STRIPPED_BAMBOO_BLOCK"
+    amount: 4
+    texture-hash: "2ed45684e246a43d197334f6b73b6d83168704f7d7639ab9fbb38b806074fff5"
+
+  mini_crimson_stem:
+    display-name: "Mini Crimson Stem"
+    input-material: "CRIMSON_STEM"
+    amount: 4
+    texture-hash: "b28874497332731576eb1b5b35c877b619ed23622716afe7d2291a684aaaa013"
+
+  mini_crimson_stem_sideWays:
+    display-name: "Mini Crimson Stem SideWays"
+    input-material: "CRIMSON_STEM"
+    amount: 4
+    texture-hash: "b25ea4e4235cc90660c57be66538e3376ff0feb186fe8d0022be49da780e07fe"
+
+  mini_stripped_crimson_stem:
+    display-name: "Mini Stripped Crimson Stem"
+    input-material: "STRIPPED_CRIMSON_STEM"
+    amount: 4
+    texture-hash: "e05f829edda0914214758551d99dc33b36f8df1f1d11c6805db310c4db5732c5"
+
+  mini_stripped_crimson_stem_sideWays:
+    display-name: "Mini Stripped Crimson Stem SideWays"
+    input-material: "STRIPPED_CRIMSON_STEM"
+    amount: 4
+    texture-hash: "2035899d4e97a896c27466f4245b321d47a5602b50fd8e75be23ab11f8acb891"
+
+  mini_warped_stem:
+    display-name: "Mini Warped Stem"
+    input-material: "WARPED_STEM"
+    amount: 4
+    texture-hash: "e32d41daee6f61ca00e5ecf9dfdd6245af620f1ab6258e986da673c57e5312a6"
+
+  mini_warped_stem_sideWays:
+    display-name: "Mini Warped Stem SideWays"
+    input-material: "WARPED_STEM"
+    amount: 4
+    texture-hash: "6f6b89df0f498034b0d1e5274aa366a24fa10da87247cc335f140a56d1774c6"
+
+  mini_stripped_warped_stem:
+    display-name: "Mini Stripped Warped Stem"
+    input-material: "STRIPPED_WARPED_STEM"
+    amount: 4
+    texture-hash: "65cb5da1c2eed43bf685189e08029fc2aeeedfae1c6a214e70f74b8a3211b0a"
+
+  mini_stripped_warped_stem_sideWays:
+    display-name: "Mini Stripped Warped Stem SideWays"
+    input-material: "STRIPPED_WARPED_STEM"
+    amount: 4
+    texture-hash: "b1194ad48765a69e3a9b4b29295ff9ee7a236d46263f323533d66ed0181bd9e0"
+
+  mini_mushroom_stem:
+    display-name: "Mini Mushroom Stem"
+    input-material: "MUSHROOM_STEM"
+    amount: 4
+    texture-hash: "96df0486493cdaad8662958da8a75658f0a63c2f9f5b5d1902a88a2a8e1a5904"
+
+  mini_mushroom_stem_sideWays:
+    display-name: "Mini Mushroom Stem SideWays"
+    input-material: "MUSHROOM_STEM"
+    amount: 4
+    texture-hash: "83ce763e2cba9ab47491113a90c20d18ac235b6d97964cd8172ea25e2b267aec"
+
+  #========================================================================================================================================================================================================
+  #                                       --- STONES & DERIVATIVES ---
+  #========================================================================================================================================================================================================
+  mini_stone:
+    display-name: "Mini Stone"
+    input-material: "STONE"
+    amount: 4
+    texture-hash: "41269584f629227713107b4e0a02dd65ddfe780e7c7118cb1ec2275c514cc95d"
+
+  mini_smooth_stone:
+    display-name: "Mini Smooth Stone"
+    input-material: "SMOOTH_STONE"
+    amount: 4
+    texture-hash: "8dd0cd158c2bb6618650e3954b2d29237f5b4c0ddc7d258e17380ab6979f071"
+
+  mini_granite:
+    display-name: "Mini Granite"
+    input-material: "GRANITE"
+    amount: 4
+    texture-hash: "de8bbfb729ff917f950eca7d753317c1c704d026ea1025ef31aeae5a40b3c88"
+
+  mini_polished_granite:
+    display-name: "Mini Polished Granite"
+    input-material: "POLISHED_GRANITE"
+    amount: 4
+    texture-hash: "fdd3447800cb28d61c33e98c5f5f020a9aa66d99935944b60279873dd566edd0"
+
+  mini_diorite:
+    display-name: "Mini Diorite"
+    input-material: "DIORITE"
+    amount: 4
+    texture-hash: "13fa5265a336abde301a9d59af4783e82a10dad0817716ead2962ab7c6d3dff"
+
+  mini_polished_diorite:
+    display-name: "Mini Polished Diorite"
+    input-material: "POLISHED_DIORITE"
+    amount: 4
+    texture-hash: "31a281f4945286c31fa077121f9b32c588fb94064de7f908cf0e9677cdda8b1"
+
+  mini_andesite:
+    display-name: "Mini Andesite"
+    input-material: "ANDESITE"
+    amount: 4
+    texture-hash: "adb7bf059a62d27b1e1e2f34394f3f38ed8cda45471f6f4d5b47c3912d181135"
+
+  mini_polished_andesite:
+    display-name: "Mini Polished Andesite"
+    input-material: "POLISHED_ANDESITE"
+    amount: 4
+    texture-hash: "bcecc8438862f1918bfddc5a516c9dbe076bd37e7fa5ac178c2ec67181e3eabc"
+
+  mini_cobblestone:
+    display-name: "Mini Cobblestone"
+    input-material: "COBBLESTONE"
+    amount: 4
+    texture-hash: "e742885db6803ab3680ca50ac2b97b08bddc24e1ad3095da914677f524a6b1a6"
+
+  mini_mossy_cobblestone:
+    display-name: "Mini Mossy Cobblestone"
+    input-material: "MOSSY_COBBLESTONE"
+    amount: 4
+    texture-hash: "4d9238efc93493b14a582639eb0aa8834eaa48e10bd4c234eb1a4c363b43d5b"
+
+  mini_stone_bricks:
+    display-name: "Mini Stone Bricks"
+    input-material: "STONE_BRICKS"
+    amount: 4
+    texture-hash: "88b767c8a1ea8e404b3cca85349f653b57b0c3f46427fbeceaccf3602bc29e"
+
+  mini_mossy_stone_bricks:
+    display-name: "Mini Mossy Stone Bricks"
+    input-material: "MOSSY_STONE_BRICKS"
+    amount: 4
+    texture-hash: "aab71a22c931911036b930e2c84261924dc9e341f31c2cd3d0f6f1df16391485"
+
+  mini_cracked_stone_bricks:
+    display-name: "Mini Cracked Stone Bricks"
+    input-material: "CRACKED_STONE_BRICKS"
+    amount: 4
+    texture-hash: "12595e15cafd9d3fa56c5f4af06b4d9df53c543644f52ba7fedea3b5cb95b078"
+
+  mini_chiseled_stone_bricks:
+    display-name: "Mini Chiseled Stone Bricks"
+    input-material: "CHISELED_STONE_BRICKS"
+    amount: 4
+    texture-hash: "88aea4097d45a6916afdcc767c508bd94dbfa2a943bb61a640609b17d5dcfdd7"
+
+  mini_deepslate:
+    display-name: "Mini Deepslate"
+    input-material: "DEEPSLATE"
+    amount: 4
+    texture-hash: "5b21ae93613bf001f940752c59d5788a1d80f4c52558a425c3bb663283589ed8"
+
+  mini_cobbled_deepslate:
+    display-name: "Mini Cobbled Deepslate"
+    input-material: "COBBLED_DEEPSLATE"
+    amount: 4
+    texture-hash: "eccb29822d49611f1a1c260b4d4a75df5b3e51cc06e049fb9466cbb306b1129b"
+
+  mini_polished_deepslate:
+    display-name: "Mini Polished Deepslate"
+    input-material: "POLISHED_DEEPSLATE"
+    amount: 4
+    texture-hash: "ed2bfb42bc21a80a2bbf7974a60ad85d7158ededb1de365084e872ca925de21e"
+
+  mini_deepslate_bricks:
+    display-name: "Mini Deepslate Bricks"
+    input-material: "DEEPSLATE_BRICKS"
+    amount: 4
+    texture-hash: "242d64b4a1769059ba15dd88a6cf7cb21135d6bce8d72ebef9c9a0f561b87d1f"
+
+  mini_cracked_deepslate_bricks:
+    display-name: "Mini Cracked Deepslate Bricks"
+    input-material: "CRACKED_DEEPSLATE_BRICKS"
+    amount: 4
+    texture-hash: "520a9ed49df1da851ec8770a3f46f724091b550ff9d222cd23dc434a393ff622"
+
+  mini_deepslate_tiles:
+    display-name: "Mini Deepslate Tiles"
+    input-material: "DEEPSLATE_TILES"
+    amount: 4
+    texture-hash: "3508640cdfaef6f14aad48aff47afb86c151d2227c6b430d0d518400d7c4a891"
+
+  mini_cracked_deepslate_tiles:
+    display-name: "Mini Cracked Deepslate Tiles"
+    input-material: "CRACKED_DEEPSLATE_TILES"
+    amount: 4
+    texture-hash: "520a9ed49df1da851ec8770a3f46f724091b550ff9d222cd23dc434a393ff622"
+
+  mini_chiseled_deepslate:
+    display-name: "Mini Chiseled Deepslate"
+    input-material: "CHISELED_DEEPSLATE"
+    amount: 4
+    texture-hash: "5351dc32fe0a524de66696a1b28c89b59c76a7efda69c2ca1f887faa38ca9fb3"
+
+  mini_tuff:
+    display-name: "Mini Tuff"
+    input-material: "TUFF"
+    amount: 4
+    texture-hash: "ff9bf5383fce543e4aa8835af8ecaed67029fd0aabb03ac0ff5a2edecee2ce4d"
+
+  mini_polished_tuff:
+    display-name: "Mini Polished Tuff"
+    input-material: "POLISHED_TUFF"
+    amount: 4
+    texture-hash: "16e843f97b97a53cf2be86db179ab2b8f74b7c33aebc1fea70042ec9e5da7847"
+
+  mini_tuff_bricks:
+    display-name: "Mini Tuff Bricks"
+    input-material: "TUFF_BRICKS"
+    amount: 4
+    texture-hash: "28a77a1635d7b89cec91e15da95d44b35fab0213c9614724b6a995fd74e4745d"
+
+  mini_chiseled_tuff_bricks:
+    display-name: "Mini Chiseled Tuff Bricks"
+    input-material: "CHISELED_TUFF_BRICKS"
+    amount: 4
+    texture-hash: "e5c568b619a9e218460ffb43ce36cd318f68ca68cb35865c309f60e388014089"
+
+  mini_chiseled_tuff:
+    display-name: "Mini Chiseled Tuff"
+    input-material: "CHISELED_TUFF"
+    amount: 4
+    texture-hash: "3360be0ce253b9c84145758e1b61de86dc47f486b3b7793c4ae454efe3cdac22"
+
+  mini_calcite:
+    display-name: "Mini Calcite"
+    input-material: "CALCITE"
+    amount: 4
+    texture-hash: "a4ad0ddd53fe2d3095be20855aaa553e9eeb0f980134cf5e0128dcf29037ff56"
+
+  mini_basalt:
+    display-name: "Mini Basalt"
+    input-material: "BASALT"
+    amount: 4
+    texture-hash: "80822c6139ab48d68523323a93cc2d2043e634f3a40f664a4a5349f3cb7c2b19"
+
+  mini_smooth_basalt:
+    display-name: "Mini Smooth Basalt"
+    input-material: "SMOOTH_BASALT"
+    amount: 4
+    texture-hash: "a2ef416866f424cd90f8a890abb2055629e6c31ae7a7846db5b231fd7af04b7"
+
+  mini_polished_basalt:
+    display-name: "Mini Smooth Basalt"
+    input-material: "POLISHED_BASALT"
+    amount: 4
+    texture-hash: "3b113a8cafc943d30aa39641d75fc2bad6a5689ebe7742334c25f594b34b48ef"
+
+  mini_blackstone:
+    display-name: "Mini Blackstone"
+    input-material: "BLACKSTONE"
+    amount: 4
+    texture-hash: "b63a84b3b40b5b52995de1b29f3906c4479077cb5125a4a4d43b4ea917890a47"
+
+  mini_polished_blackstone:
+    display-name: "Mini Polished Blackstone"
+    input-material: "POLISHED_BLACKSTONE"
+    amount: 4
+    texture-hash: "5c9ee1d558a89f11cd577a90b7b1b96fda34c21c400960390815c23db54b6471"
+
+  mini_polished_blackstone_bricks:
+    display-name: "Mini Polished Blackstone Bricks"
+    input-material: "POLISHED_BLACKSTONE_BRICKS"
+    amount: 4
+    texture-hash: "36bb3c4af4b5d3ae8e42a4e96a4f9c4c840c75768bf9bfd7bfea6dee492bbd3b"
+
+  mini_cracked_polished_blackstone_bricks:
+    display-name: "Mini Cracked Polished Blackstone Bricks"
+    input-material: "CRACKED_POLISHED_BLACKSTONE_BRICKS"
+    amount: 4
+    texture-hash: "df8373a028f8d33be8a6af58ee0955ab9ff1a5a92e557e18f69790a6970177aa"
+
+  mini_chiseled_polished_blackstone:
+    display-name: "Mini Chiseled Polished Blackstone"
+    input-material: "CHISELED_POLISHED_BLACKSTONE"
+    amount: 4
+    texture-hash: "6fd9ae6d9a01f038fcba9ded72c1cfd8c794a6ba58f9e65a4448cffebee653eb"
+
+  mini_gilded_blackstone:
+    display-name: "Mini Gilded Blackstone"
+    input-material: "GILDED_BLACKSTONE"
+    amount: 4
+    texture-hash: "c482d1ba4bdac990f6ea987703587fd79fe55555363251984679d4f279cc0c2a"
+
+  #========================================================================================================================================================================================================
+  #                                       --- ORES & MINERAL BLOCKS ---
+  #========================================================================================================================================================================================================
+  mini_coal_ore:
+    display-name: "Mini Coal Ore"
+    input-material: "COAL_ORE"
+    amount: 4
+    texture-hash: "761c57974f102d3deb3c53d42fde909e9b39ccbc7f776e277575a02d51a1999e"
+
+  mini_deepslate_coal_ore:
+    display-name: "Mini Deepslate Coal Ore"
+    input-material: "DEEPSLATE_COAL_ORE"
+    amount: 4
+    texture-hash: "b1d96ebb59ff62ebafe75a6711e82ccb6b885db11e9a524e40e862196f65af14"
+
+  mini_iron_ore:
+    display-name: "Mini Iron Ore"
+    input-material: "IRON_ORE"
+    amount: 4
+    texture-hash: "101843ec43f088c963ffc3e2f71c66e3155943b177a1a35982b120f6f64822bc"
+
+  mini_deepslate_iron_ore:
+    display-name: "Mini Deepslate Iron Ore"
+    input-material: "DEEPSLATE_IRON_ORE"
+    amount: 4
+    texture-hash: "7a23d4819720c95c5519b95c6d5567215e438f8d1730a75af5c96590e03b3ab8"
+
+  mini_copper_ore:
+    display-name: "Mini Copper Ore"
+    input-material: "COPPER_ORE"
+    amount: 4
+    texture-hash: "df8ea387b960e9f2a41db323f6de8ec81c652eafa933a4102b96b9ef40c836e5"
+
+  mini_deepslate_copper_ore:
+    display-name: "Mini Deepslate Copper Ore"
+    input-material: "DEEPSLATE_COPPER_ORE"
+    amount: 4
+    texture-hash: "a4a8b833370aa60e6935eae6434ab937190517edead2f5dad9d0498946b9d637"
+
+  mini_gold_ore:
+    display-name: "Mini Gold Ore"
+    input-material: "GOLD_ORE"
+    amount: 4
+    texture-hash: "73bc965d579c3c6039f0a17eb7c2e6faf538c7a5de8e60ec7a719360d0a857a9"
+
+  mini_deepslate_gold_ore:
+    display-name: "Mini Deepslate Gold Ore"
+    input-material: "DEEPSLATE_GOLD_ORE"
+    amount: 4
+    texture-hash: "80c9c5eb1bfcf99a0d8c6e822c500c9971036575f401175d4a0400ec32a3a1ac"
+
+  mini_redstone_ore:
+    display-name: "Mini Redstone Ore"
+    input-material: "REDSTONE_ORE"
+    amount: 4
+    texture-hash: "569a1f114151b4521373f34bc14c2963a5011cdc25a6554c48c708cd96ebfc"
+
+  mini_deepslate_redstone_ore:
+    display-name: "Mini Deepslate Redstone Ore"
+    input-material: "DEEPSLATE_REDSTONE_ORE"
+    amount: 4
+    texture-hash: "6c361af96ac2c997745083844645279987aca65679046e5adba77fc5f4f281d0"
+
+  mini_lapis_ore:
+    display-name: "Mini Lapis Ore"
+    input-material: "LAPIS_ORE"
+    amount: 4
+    texture-hash: "51001b425111bfe0acff710a8b41ea95e3b936a85e5bb6517160bab587e8870f"
+
+  mini_deepslate_lapis_ore:
+    display-name: "Mini Deepslate Lapis Ore"
+    input-material: "DEEPSLATE_LAPIS_ORE"
+    amount: 4
+    texture-hash: "bc5bf49febec955eb3b328ce1709f7bb9f469c27a7ff40d1306942c08f96250e"
+
+  mini_diamond_ore:
+    display-name: "Mini Diamond Ore"
+    input-material: "DIAMOND_ORE"
+    amount: 4
+    texture-hash: "11ed9abf51fe4ea84cfcb27297f1bc54cd382edf85e7bd6e75ecca2b806611"
+
+  mini_deepslate_diamond_ore:
+    display-name: "Mini Deepslate Diamond Ore"
+    input-material: "DEEPSLATE_DIAMOND_ORE"
+    amount: 4
+    texture-hash: "1828522e8680c55b2fe5b9bcfc8ad06e3323f9783d8351ca50edeb431e63190f"
+
+  mini_emerald_ore:
+    display-name: "Mini Emerald Ore"
+    input-material: "EMERALD_ORE"
+    amount: 4
+    texture-hash: "4053851527c4c9ef30a61fb067ebce957c726e1687f8b530fb4a6beeba438bd"
+
+  mini_deepslate_emerald_ore:
+    display-name: "Mini Deepslate Emerald Ore"
+    input-material: "DEEPSLATE_EMERALD_ORE"
+    amount: 4
+    texture-hash: "918dfca66e497f6241db6b1f2dfe135309a566cd6c0775a9ca55e5faee0c605a"
+
+  mini_nether_gold_ore:
+    display-name: "Mini Nether Gold Ore"
+    input-material: "NETHER_GOLD_ORE"
+    amount: 4
+    texture-hash: "29543f27575003dd5c898eab7bfe4c3dbbe570648089f3b97403df7f6bf2c1cc"
+
+  mini_nether_quartz_ore:
+    display-name: "Mini Nether Quartz Ore"
+    input-material: "NETHER_QUARTZ_ORE"
+    amount: 4
+    texture-hash: "f4d69c4cddf903fbcc5a8c67cc22e4d9324272d52a4796d6672435d101598985"
+
+  mini_ancient_debris:
+    display-name: "Mini Ancient Debris"
+    input-material: "ANCIENT_DEBRIS"
+    amount: 4
+    texture-hash: "9fa2610545c5193b1776fae6f5d6f17579d6002aea032f9f52b54bd3bff59a51"
+
+  mini_coal_block:
+    display-name: "Mini Coal Block"
+    input-material: "COAL_BLOCK"
+    amount: 4
+    texture-hash: "f6c5ecac942c77b95ab4620df5b85e38064c974f9c5c576b843622806a4557"
+
+  mini_iron_block:
+    display-name: "Mini Iron Block"
+    input-material: "IRON_BLOCK"
+    amount: 4
+    texture-hash: "126b772329cf32f8643c4928626b6a325233ff61aa9c7725873a4bd66db3d692"
+
+  mini_gold_block:
+    display-name: "Mini Gold Block"
+    input-material: "GOLD_BLOCK"
+    amount: 4
+    texture-hash: "97f57e7aa8de86591bb0bc52cba30a49d931bfabbd47bbc80bdd662251392161"
+
+  mini_diamond_block:
+    display-name: "Mini Diamond Block"
+    input-material: "DIAMOND_BLOCK"
+    amount: 4
+    texture-hash: "1f74a9644ec3ccbe936ca6294297c0eece4716d25127bb1b12521f3f58df96da"
+
+  mini_redstone_block:
+    display-name: "Mini Redstone Block"
+    input-material: "REDSTONE_BLOCK"
+    amount: 4
+    texture-hash: "d08ee6edfa98db5eae9b9c9936e94489b2d4bbbd3d2b4b6b4885a32240613c"
+
+  mini_emerald_block:
+    display-name: "Mini Emerald Block"
+    input-material: "EMERALD_BLOCK"
+    amount: 4
+    texture-hash: "b72c05dd76288f4328a24391bf4725fd2260592db3cf9b2bc2032dd0596cf440"
+
+  mini_lapis_block:
+    display-name: "Mini Lapis Block"
+    input-material: "LAPIS_BLOCK"
+    amount: 4
+    texture-hash: "be6ffada320868937513784e8f7979c739c7283392e52bcd178b848f4495607a"
+
+  mini_amethyst_block:
+    display-name: "Mini Amethyst Block"
+    input-material: "AMETHYST_BLOCK"
+    amount: 4
+    texture-hash: "8b5e3dece425c8b4cd4691f76a218c8a0d0480ba802e61282d02d0d567ed8c3e"
+
+  mini_ruby_block:
+    display-name: "Mini Ruby Block"
+    input-material: "EMERALD_BLOCK"
+    amount: 4
+    texture-hash: "eeb118dec73cfbf8885a2069d70273f37c0ef109579d8070aa793a481bd643e4"
+
+  mini_netherite_block:
+    display-name: "Mini Netherite Block"
+    input-material: "NETHERITE_BLOCK"
+    amount: 4
+    texture-hash: "27957f895d7bc53423a35aac59d584b41cc30e040269c955e451fe680a1cc049"
+
+  mini_raw_iron_block:
+    display-name: "Mini Raw Iron Block"
+    input-material: "RAW_IRON_BLOCK"
+    amount: 4
+    texture-hash: "447f2e39d96e5d04386473daf0eb0ae00b17fa015556c9ca39f8e2de8a2369f2"
+
+  mini_raw_gold_block:
+    display-name: "Mini Raw Gold Block"
+    input-material: "RAW_GOLD_BLOCK"
+    amount: 4
+    texture-hash: "eaddff6916e6410df6b883158aeadace6b36733374be6bed1821e3e74c95d91b"
+
+  mini_raw_copper_block:
+    display-name: "Mini Raw Copper Block"
+    input-material: "RAW_COPPER_BLOCK"
+    amount: 4
+    texture-hash: "ee8a4f35c1a0c8b3bd821a76e38473427c988fdf5a2de025646e07351e393c7e"
+
+  mini_honey_block:
+    display-name: "Mini Honey Block"
+    input-material: "HONEY_BLOCK"
+    amount: 4
+    texture-hash: "4a7e0d55ea8051569955da138697174a0bd76190b2d58b997509737dce5fb61f"
+
+  mini_slime_block:
+    display-name: "Mini Slime Block"
+    input-material: "SLIME_BLOCK"
+    amount: 4
+    texture-hash: "6b1e7957feb8551241fa1e9181356bc0df56a23323614a88ca5fed4dcbf6c2e"
+
+  mini_boneblock:
+    display-name: "Mini Bone Block"
+    input-material: "BONE_BLOCK"
+    amount: 4
+    texture-hash: "c301392bf052f91d3aa56b5a5c17d5ea261e12c5dbfeb8f04fe2a028d30fa594"
+
+  #========================================================================================================================================================================================================
+  #                                       --- COPPER BLOCKS ---
+  #========================================================================================================================================================================================================
+  mini_copper_block:
+    display-name: "Mini Copper Block"
+    input-material: "COPPER_BLOCK"
+    amount: 4
+    texture-hash: "40a6e6aa7ce99c81daf816d69638d52b2882a2558880222e9a466dcedc88015a"
+
+  mini_exposed_copper:
+    display-name: "Mini Exposed Copper"
+    input-material: "EXPOSED_COPPER"
+    amount: 4
+    texture-hash: "71e21994244b029af38520a713849ed71ef29586bd286ced2ba1675ba5f4a44e"
+
+  mini_weathered_copper:
+    display-name: "Mini Weathered Copper"
+    input-material: "WEATHERED_COPPER"
+    amount: 4
+    texture-hash: "30ac99a807488de60b53203fee2df398569bbf04dbc8c02bfa749781caa2bf20"
+
+  mini_oxidized_copper:
+    display-name: "Mini Oxidized Copper"
+    input-material: "OXIDIZED_COPPER"
+    amount: 4
+    texture-hash: "9a5b0c0e28a10157725ea00bdf00f176414d40a1812c60b90d3fe22cc32d0323"
+
+  mini_cut_copper:
+    display-name: "Mini Cut Copper"
+    input-material: "CUT_COPPER"
+    amount: 4
+    texture-hash: "f5669ae370e414d9a10f37b022933f64ec6d1e979fadb3c1f9004b485fddd225"
+
+  mini_chiseled_copper:
+    display-name: "Mini Chiseled Copper"
+    input-material: "CHISELED_COPPER"
+    amount: 4
+    texture-hash: "340412534fd318a24509d480abe6c11f3b07eeeb652c369e80d9657d45c4f9f8"
+
+  #========================================================================================================================================================================================================
+  #                                       --- NETHER & END ---
+  #========================================================================================================================================================================================================
+  mini_netherrack_CHECK:
+    display-name: "Mini Netherrack"
+    input-material: "NETHERRACK"
+    amount: 4
+    texture-hash: "4bfd7e09dcad4c61247447c77d246d220ea91d98caabed5169dc5b8137fec9"
+
+  mini_nether_bricks:
+    display-name: "Mini Nether Bricks"
+    input-material: "NETHER_BRICKS"
+    amount: 4
+    texture-hash: "727bf876435e04dde9da19924315ae59a8efc27af1ddbef813d89cfaffe91647"
+
+  mini_cracked_nether_bricks:
+    display-name: "Mini Cracked Nether Bricks"
+    input-material: "CRACKED_NETHER_BRICKS"
+    amount: 4
+    texture-hash: "583b770825f717f7517e7fb6f80b0c4bd1a80a12adfd446d20ef9fe82d66f510"
+
+  mini_chiseled_nether_bricks:
+    display-name: "Mini Chiseled Nether Bricks"
+    input-material: "CHISELED_NETHER_BRICKS"
+    amount: 4
+    texture-hash: "9eb47017d2b38f4f5d05f7145e9720a3002ef7a29bb5e78206e81c8927ac0961"
+
+  mini_red_nether_bricks:
+    display-name: "Mini Red Nether Bricks"
+    input-material: "RED_NETHER_BRICKS"
+    amount: 4
+    texture-hash: "2959ac284dfacca5a8e6c179609825875a768af3291c77e8a68bd9034da3ec64"
+
+  mini_end_stone:
+    display-name: "Mini End Stone"
+    input-material: "END_STONE"
+    amount: 4
+    texture-hash: "42813cf8c4fd013baf5bf55a8c93121c482da1cf6e1054c180ff3e81727b65dd"
+
+  mini_end_stone_bricks:
+    display-name: "Mini End Stone Bricks"
+    input-material: "END_STONE_BRICKS"
+    amount: 4
+    texture-hash: "66de65d1896812681105bb3c017fb3acd3f4dd63b13b18da14d59be984a63d7"
+
+  mini_purpur_block:
+    display-name: "Mini Purpur Block"
+    input-material: "PURPUR_BLOCK"
+    amount: 4
+    texture-hash: "9dbf73457b539dc81c30394b6f72f57a113b40b9cbe9b0aa042e48f1c9155bc6"
+
+  mini_purpur_pillar:
+    display-name: "Mini Purpur Pillar"
+    input-material: "PURPUR_PILLAR"
+    amount: 4
+    texture-hash: "a452498bd9ba51a1424d96bf96be0cb103c9338defdf172ca13f5e24f5f9d8f"
+
+  mini_obsidian:
+    display-name: "Mini Obsidian"
+    input-material: "OBSIDIAN"
+    amount: 4
+    texture-hash: "4e760bbc113c273fac40896fa2089a56cc746a79a7a8275f63857e69e6f7703a"
+
+  mini_crying_obsidian:
+    display-name: "Mini Crying Obsidian"
+    input-material: "CRYING_OBSIDIAN"
+    amount: 4
+    texture-hash: "6426ab888298adf1effd811c8074def09780e7d9d12ba4c77b73fda9982dd0fe"
+
+  mini_magma_block:
+    display-name: "Mini Magma Block"
+    input-material: "MAGMA_BLOCK"
+    amount: 4
+    texture-hash: "721d0930bd61fea4cb9027b00e94e13d62029c524ea0b3260c747457ba1bcfa1"
+
+  mini_soul_sand:
+    display-name: "Mini Soul Sand"
+    input-material: "SOUL_SAND"
+    amount: 4
+    texture-hash: "fa0fe699fc7e79d237e54025b5a8d6f71b812bd276dd4c4c80329bda20a54822"
+
+  mini_soul_soil:
+    display-name: "Mini Soul Soil"
+    input-material: "SOUL_SOIL"
+    amount: 4
+    texture-hash: "8d065419e7d844410a440d05cc3c170a3161ee46839741186b80e80639c906ba"
+
+  mini_shroomlight:
+    display-name: "Mini ShroomLight"
+    input-material: "SHROOMLIGHT"
+    amount: 4
+    texture-hash: "d8068a3e9ed0e688768cfe017eadfffc921068fb4a8a10babadce75cf572aaa3"
+
+  mini_nether_wart_block:
+    display-name: "Mini Nether Wart Block"
+    input-material: "NETHER_WART_BLOCK"
+    amount: 4
+    texture-hash: "f8912bc1ad3ddbe39a19b734a42d8548964bb0a9ce58a52f1a6ae37121524"
+
+  mini_warped_wart_block:
+    display-name: "Mini Warped Wart Block"
+    input-material: "WARPED_WART_BLOCK"
+    amount: 4
+    texture-hash: "b00b114b89c737bf27b3a71ecc12ac0b34d7652d848595a78873eb2d31a3bd17"
+
+  #========================================================================================================================================================================================================
+  #                                       --- QUARTZ & PRISMARINE ---
+  #========================================================================================================================================================================================================
+  mini_quartz_block_CHECK:
+    display-name: "Mini Quartz Block"
+    input-material: "QUARTZ_BLOCK"
+    amount: 4
+    texture-hash: "e5e2b2ed298b53cc84783cd785ec57da49ceaabdcff31b25fe5256b3429b412"
+
+  mini_smooth_quartz:
+    display-name: "Mini Smooth Quartz"
+    input-material: "SMOOTH_QUARTZ"
+    amount: 4
+    texture-hash: "c92b2b0414cee36b24d83f5cfa071d8638527249c2dcddfa580be37e07c60e08"
+
+  mini_chiseled_quartz_block:
+    display-name: "Mini Chiseled Quartz Block"
+    input-material: "CHISELED_QUARTZ_BLOCK"
+    amount: 4
+    texture-hash: "9f28bb0b5a2ec3999a28ed550e686842ed195e974cb02f433a369ee5957a2b6e"
+
+  mini_quartz_pillar:
+    display-name: "Mini Quartz Pillar"
+    input-material: "QUARTZ_PILLAR"
+    amount: 4
+    texture-hash: "baebf178a67f2ea3c9d896d3870f1f8ce38fae060e010c69798ad351e31e6197"
+
+  mini_quartz_bricks:
+    display-name: "Mini Quartz Bricks"
+    input-material: "QUARTZ_BRICKS"
+    amount: 4
+    texture-hash: "11b4b268e8ea16a2401f2e8b98428877de5be29cd329172325f5077130c4c9c9"
+
+  mini_prismarine:
+    display-name: "Mini Prismarine"
+    input-material: "PRISMARINE"
+    amount: 4
+    texture-hash: "df16d0799d2092a4e29a4628b522c5ca65b42ed0d74b61efd3bbaa728e409079"
+
+  mini_prismarine_bricks:
+    display-name: "Mini Prismarine Bricks"
+    input-material: "PRISMARINE_BRICKS"
+    amount: 4
+    texture-hash: "9dfef03a9d9fa7aa9c13867ae7f88a00a708a06df24ec1d5b696d0f77a1b96b1"
+
+  mini_dark_prismarine:
+    display-name: "Mini Dark Prismarine"
+    input-material: "DARK_PRISMARINE"
+    amount: 4
+    texture-hash: "bf503bdd15ec4bead35f9e9108a2cb8d0dc381dc512794ced6bb4f21dc9d8a8a"
+
+  #========================================================================================================================================================================================================
+  #                                       --- NATURE & SOIL ---
+  #========================================================================================================================================================================================================
+  mini_dirt:
+    display-name: "Mini Dirt"
+    input-material: "DIRT"
+    amount: 4
+    texture-hash: "1ab43b8c3d34f125e5a3f8b92cd43dfd14c62402c33298461d4d4d7ce2d3aea"
+
+  mini_coarse_dirt:
+    display-name: "Mini Coarse Dirt"
+    input-material: "COARSE_DIRT"
+    amount: 4
+    texture-hash: "93511298d7ffd4c9ba6f8dca71d33b1d2916cec3118dc4af01c6da695670273e"
+
+  mini_rooted_dirt:
+    display-name: "Mini Rooted Dirt"
+    input-material: "ROOTED_DIRT"
+    amount: 4
+    texture-hash: "760895f23a61dcfad339b92f2d1729d13528a86b2ca5267ca9dfdfae8eddffcd"
+
+  mini_dirt_path:
+    display-name: "Mini Dirt Path"
+    input-material: "DIRT_PATH"
+    amount: 4
+    texture-hash: "35a9cfdb78ac1beb7823bcc87b7e3af82daee10a57835dc4cb632bf1cee21580"
+
+  mini_podzol:
+    display-name: "Mini Podzol"
+    input-material: "PODZOL"
+    amount: 4
+    texture-hash: "1e9f2a4f63298cd0e1fb9df73735c21c7a76002387e9c63ba7cff1fa71d9e081"
+
+  mini_mycelium:
+    display-name: "Mini Mycelium"
+    input-material: "MYCELIUM"
+    amount: 4
+    texture-hash: "f53631f6f214ec89542ca6f86f11694a34a2757aeaa55bbf1f3531a69a80640f"
+
+  mini_grass_block:
+    display-name: "Mini Grass Block"
+    input-material: "GRASS_BLOCK"
+    amount: 4
+    texture-hash: "b881ed1cd05c5c2b076fb34f4524f7d3cf728cff1d2400d8334d5ebeac9a9ad4"
+
+  mini_mud:
+    display-name: "Mini Mud"
+    input-material: "MUD"
+    amount: 4
+    texture-hash: "ef8283b7b02026c5d64d181c83fc6f572e494aa636cef7928b2b6ddda599e83e"
+
+  mini_packed_mud:
+    display-name: "Mini Packed Mud"
+    input-material: "PACKED_MUD"
+    amount: 4
+    texture-hash: "8dcc9fe8188d2920edb41f316a5c8ed4bd11d7860992c63ec204a56a840c8339"
+
+  mini_muddy_mangrove_roots:
+    display-name: "Mini Muddy Mangrove Roots"
+    input-material: "MUDDY_MANGROVE_ROOTS"
+    amount: 4
+    texture-hash: "a10d6ed5f2190485cb6ef9a5a20a0433e5d06cb88d3a0d8e9f6eb88db553584e"
+
+  mini_mud_bricks:
+    display-name: "Mini Mud Bricks"
+    input-material: "MUD_BRICKS"
+    amount: 4
+    texture-hash: "cf86117cab6ad612d7ec9ab63e6088099038bf714d39ec8a71c269e399c6f55e"
+
+  mini_sand:
+    display-name: "Mini Sand"
+    input-material: "SAND"
+    amount: 4
+    texture-hash: "7920e2dba84c05d06506039b94ad1d8249e16001d9a3bd0bed9227076e6cc37e"
+
+  mini_red_sand:
+    display-name: "Mini Red Sand"
+    input-material: "RED_SAND"
+    amount: 4
+    texture-hash: "8dcaba0ec8f77583d9f726e69976c240f7fcc6c909f2ca356ce74444204bb090"
+
+  mini_gravel:
+    display-name: "Mini Gravel"
+    input-material: "GRAVEL"
+    amount: 4
+    texture-hash: "c754318a3376f470e481dfcd6c83a59aa690ad4b4dd7577fdad1c2ef08d8aee6"
+
+  mini_clay:
+    display-name: "Mini Clay"
+    input-material: "CLAY"
+    amount: 4
+    texture-hash: "818e0542bd1c327e3e2d69403a9f4797c15931e585fc5ac3488fd6169e8fa7ec"
+
+  mini_snow_block:
+    display-name: "Mini Snow Block"
+    input-material: "SNOW_BLOCK"
+    amount: 4
+    texture-hash: "482ed53d97e628cb30c9a422d5785857b5fcfbe68961e07fcb50f4e6c105201b"
+
+  mini_powder_snow_block:
+    display-name: "Mini Powder Snow Block"
+    input-material: "POWDER_SNOW_BUCKET"
+    amount: 4
+    texture-hash: "cd8c81e7d38243c1a5c0cd78c72a0824764bcb1eecb6d2d89042d771d23f26bb"
+
+  mini_ice:
+    display-name: "Mini Ice"
+    input-material: "ICE"
+    amount: 4
+    texture-hash: "6a83d1aac066dfd7d668af1f6b2e520152aebb624524a0f99d50935ba3d4e22a"
+
+  mini_packed_ice:
+    display-name: "Mini Packed Ice"
+    input-material: "PACKED_ICE"
+    amount: 4
+    texture-hash: "26e429c60932ebc366e791a42e186af888de08e5d8eb8ac6f5b6f4d440db486c"
+
+  mini_blue_ice:
+    display-name: "Mini Blue Ice"
+    input-material: "BLUE_ICE"
+    amount: 4
+    texture-hash: "581b4f5f3d99672ab1a39f5f410bd4d4fd92548e07d17bdf0d4f1f57dcebb5cf"
+
+  mini_moss_block:
+    display-name: "Mini Moss Block"
+    input-material: "MOSS_BLOCK"
+    amount: 4
+    texture-hash: "eb096e01de2eb1e8499fd284b8b2cd9c2db56e632c302a2f9a0884f2381d8067"
+
+  #========================================================================================================================================================================================================
+  #                                       --- WOOL ---
+  #========================================================================================================================================================================================================
+  mini_white_wool_CHECK:
+    display-name: "Mini White Wool"
+    input-material: "WHITE_WOOL"
+    amount: 4
+    texture-hash: "3faf4c29f1e7405f4680c5c2b03ef9384f1aecfe2986ad50138c605fefff2f15"
+
+  mini_orange_wool:
+    display-name: "Mini Orange Wool"
+    input-material: "ORANGE_WOOL"
+    amount: 4
+    texture-hash: "adf2eb205a23c1196b3ecf21e68c076b696e76163ac8fc4fb9f5318c2a5e5b1a"
+
+  mini_magenta_wool:
+    display-name: "Mini Magenta Wool"
+    input-material: "MAGENTA_WOOL"
+    amount: 4
+    texture-hash: "f97012ed6a92b05ea0f194950748544e075baa28781ca373d1b27e28c26953c"
+
+  mini_light_blue_wool:
+    display-name: "Mini Light Blue Wool"
+    input-material: "LIGHT_BLUE_WOOL"
+    amount: 4
+    texture-hash: "f1af46febd45c0f4d81e8fa1b66b275d89e272b2ad55c978553a99c733e1ff"
+
+  mini_yellow_wool:
+    display-name: "Mini Yellow Wool"
+    input-material: "YELLOW_WOOL"
+    amount: 4
+    texture-hash: "4d905269accab24b11924eba8bd92991b8d85ce4276027a1636c931b6d06c89e"
+
+  mini_lime_wool:
+    display-name: "Mini Lime Wool"
+    input-material: "LIME_WOOL"
+    amount: 4
+    texture-hash: "77472d608821f45a8805376ec0c6ffcb78117829ea5f960041c2a09d10e04cb4"
+
+  mini_pink_wool:
+    display-name: "Mini Pink Wool"
+    input-material: "PINK_WOOL"
+    amount: 4
+    texture-hash: "d0883650ea929db0eabdf5bc75599d8ef00d70340cd1ce5e04ad95ef8ed83b73"
+
+  mini_gray_wool:
+    display-name: "Mini Gray Wool"
+    input-material: "GRAY_WOOL"
+    amount: 4
+    texture-hash: "adf21f532122566af893da27880a1b6095c35712f29a378cfecc7fe2b1328ab4"
+
+  mini_light_gray_wool:
+    display-name: "Mini Light Gray Wool"
+    input-material: "LIGHT_GRAY_WOOL"
+    amount: 4
+    texture-hash: "998ba2b374cfc89454c1b8c32db458a270675439a495496c96771c989116162"
+
+  mini_cyan_wool:
+    display-name: "Mini Cyan Wool"
+    input-material: "CYAN_WOOL"
+    amount: 4
+    texture-hash: "88efad74b254e57c799763dceee4511fa2f85ae9fa556eaa97d45bf67e0b6b3"
+
+  mini_purple_wool:
+    display-name: "Mini Purple Wool"
+    input-material: "PURPLE_WOOL"
+    amount: 4
+    texture-hash: "89ec5a30222d0659b0dbee844b8f53eae62fe95b4a3448a9ef790a7aedb296d9"
+
+  mini_blue_wool:
+    display-name: "Mini Blue Wool"
+    input-material: "BLUE_WOOL"
+    amount: 4
+    texture-hash: "ea81fcb51be2a9f89b1adc9d87239ba429d635fbe01b37ec329164887bf665b"
+
+  mini_brown_wool:
+    display-name: "Mini Brown Wool"
+    input-material: "BROWN_WOOL"
+    amount: 4
+    texture-hash: "32e36f6a654de74583d8030177ad6e3ac6755d7435d9123e8ebdff74b2d90cb"
+
+  mini_green_wool:
+    display-name: "Mini Green Wool"
+    input-material: "GREEN_WOOL"
+    amount: 4
+    texture-hash: "484684344ae098529fc941aa84e195bdca3748d69acfee2bac1332135edd98c"
+
+  mini_red_wool:
+    display-name: "Mini Red Wool"
+    input-material: "RED_WOOL"
+    amount: 4
+    texture-hash: "86d35a963d5987894b6bc214e328b39cd2382426ff9c8e082b0b6a6e044d3a3"
+
+  mini_black_wool:
+    display-name: "Mini Black Wool"
+    input-material: "BLACK_WOOL"
+    amount: 4
+    texture-hash: "3ab0263bdd76f3e418dba5bf481b921ced397d8b8a34a5561fb7beaa46ece1"
+
+  #========================================================================================================================================================================================================
+  #                                       --- CONCRETE ---
+  #========================================================================================================================================================================================================
+  mini_white_concrete:
+    display-name: "Mini White Concrete"
+    input-material: "WHITE_CONCRETE"
+    amount: 4
+    texture-hash: "d0925c48b05662848ec9f0685f858d889d3da11b071788eaa36ccd8f1f31de"
+
+  mini_white_concrete_powder:
+    display-name: "Mini White Concrete Powder"
+    input-material: "WHITE_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "af3eaf4c15ad67c51dff9097bd7abd4a82bab7bed83ab77a6177f2e57b"
+
+  mini_orange_concrete:
+    display-name: "Mini Orange Concrete"
+    input-material: "ORANGE_CONCRETE"
+    amount: 4
+    texture-hash: "63f13e23ec23467ac5e6f65a83f2686ebecd9986df5f8cbcd6fafc42e662b38"
+
+  mini_orange_concrete_powder:
+    display-name: "Mini Orange Concrete Powder"
+    input-material: "ORANGE_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "85bec1574de373dfb775ab58b2c1e4621d92c6daac7c6a74d78fb70fff4d0"
+
+  mini_magenta_concrete:
+    display-name: "Mini Magenta Concrete"
+    input-material: "MAGENTA_CONCRETE"
+    amount: 4
+    texture-hash: "65ef2d87f7c1def79523e956767b8284ca389b24299f5e465d457989d62df8"
+
+  mini_magenta_concrete_powder:
+    display-name: "Mini Magenta Concrete Powder"
+    input-material: "MAGENTA_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "1834e7efa4842ae0e3194217de62fdc0bf9c72d193a160207d1c3741d7da"
+
+  mini_light_blue_concrete:
+    display-name: "Mini Light Blue Concrete"
+    input-material: "LIGHT_BLUE_CONCRETE"
+    amount: 4
+    texture-hash: "f477f44389362c4c764c847a9739bc78c32467eab4e3830ae4c8beac3442ef9"
+
+  mini_light_blue_concrete_powder:
+    display-name: "Mini Light Blue Concrete Powder"
+    input-material: "LIGHT_BLUE_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "29e4a399befd967ec282c719fbfd644863281374dcb8137a72f7c4d013a73f"
+
+  mini_yellow_concrete:
+    display-name: "Mini Yellow Concrete"
+    input-material: "YELLOW_CONCRETE"
+    amount: 4
+    texture-hash: "fca5bff325ed71d97a2ddfc83acf05fe7fd9cb7cbdb15ebb4f05621907e9f2b"
+
+  mini_yellow_concrete_powder:
+    display-name: "Mini Yellow Concrete Powder"
+    input-material: "YELLOW_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "f7a9964f572fd03c32dfa2586155fa3d10e627df779a41f262fde82bfb41ba0"
+
+  mini_lime_concrete:
+    display-name: "Mini Lime Concrete"
+    input-material: "LIME_CONCRETE"
+    amount: 4
+    texture-hash: "4b599c618e914c25a37d69f541a22bebbf751615263756f2561fab4cfa39e"
+
+  mini_lime_concrete_powder:
+    display-name: "Mini Lime Concrete Powder"
+    input-material: "LIME_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "9cb81a35d2b48d5fd81249369433c078b7c8bf42df5aa9c375c1ac85f4514"
+
+  mini_pink_concrete:
+    display-name: "Mini Pink Concrete"
+    input-material: "PINK_CONCRETE"
+    amount: 4
+    texture-hash: "22749d37c3f98d457bf54022a8b613a4353ed8dd2e149426fc42db3b7d"
+
+  mini_pink_concrete_powder:
+    display-name: "Mini Pink Concrete Powder"
+    input-material: "PINK_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "df387b69f94feea25671fc399eb75dbeac60f512a4bfe78e454171ee3fc0"
+
+  mini_gray_concrete:
+    display-name: "Mini Gray Concrete"
+    input-material: "GRAY_CONCRETE"
+    amount: 4
+    texture-hash: "c06d7befc82f201f83e193767e63f81037215afd483a38d36965982ca6d0"
+
+  mini_gray_concrete_powder:
+    display-name: "Mini Gray Concrete Powder"
+    input-material: "GRAY_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "36dc6d42495817b8d4db1311115d1f5cfbede6832192b52f32d48ef7d8b5d"
+
+  mini_light_gray_concrete:
+    display-name: "Mini Light Gray Concrete"
+    input-material: "LIGHT_GRAY_CONCRETE"
+    amount: 4
+    texture-hash: "6ba0c4a0fdce923a9048328d664147c5b924491f4ee5fea71f3e9ec314"
+
+  mini_light_gray_concrete_powder:
+    display-name: "Mini Light Gray Concrete Powder"
+    input-material: "LIGHT_GRAY_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "f036343a06ad2eb0f5c587391e1f82d3afb2e87b449221ff77ca1800ffac0add"
+
+  mini_cyan_concrete:
+    display-name: "Mini Cyan Concrete"
+    input-material: "CYAN_CONCRETE"
+    amount: 4
+    texture-hash: "f33b51fef1d7fdf19274bb76fcedecec7a77d010cb34fe029fb794cc59aba"
+
+  mini_cyan_concrete_powder:
+    display-name: "Mini Cyan Concrete Powder"
+    input-material: "CYAN_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "481899d07ed8a5441bb3faf1e19dcc97537cbdf91c703ebf85ac31c88198fc"
+
+  mini_purple_concrete:
+    display-name: "Mini Purple Concrete"
+    input-material: "PURPLE_CONCRETE"
+    amount: 4
+    texture-hash: "f0c05d560d8e13f0cb25c15c831bc595450c5e54ce35fa54e17e0495267c"
+
+  mini_purple_concrete_powder:
+    display-name: "Mini Purple Concrete Powder"
+    input-material: "PURPLE_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "6c4dc8338415b2b989ab79495986ec7895aa03679d2bcdd6d9ebb633b87fc4"
+
+  mini_blue_concrete:
+    display-name: "Mini Blue Concrete"
+    input-material: "BLUE_CONCRETE"
+    amount: 4
+    texture-hash: "57c7a297103db084af6273b879805afc8577cc82c752ac266cf8d7a6eea60"
+
+  mini_blue_concrete_powder:
+    display-name: "Mini Blue Concrete Powder"
+    input-material: "BLUE_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "1da76d6ddcdbb4973332155796c030cfa2fe855ce539e813e588c61d4d6bca5c"
+
+  mini_brown_concrete:
+    display-name: "Mini Brown Concrete"
+    input-material: "BROWN_CONCRETE"
+    amount: 4
+    texture-hash: "6538120f618f2ccd3bbdc18cd5782e6382ae9ee72d05f5f86276ada54ef7ed"
+
+  mini_brown_concrete_powder:
+    display-name: "Mini Brown Concrete Powder"
+    input-material: "BROWN_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "6795f96de36341a2e9c3fab95acf8e92fde3dbc99f2166518a937cccdd6ed13b"
+
+  mini_green_concrete:
+    display-name: "Mini Green Concrete"
+    input-material: "GREEN_CONCRETE"
+    amount: 4
+    texture-hash: "dfab7daeb8f333c7886a70ef30caf4dec4a8cd10493f23802f1516bdd23fcd"
+
+  mini_green_concrete_powder:
+    display-name: "Mini Green Concrete Powder"
+    input-material: "GREEN_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "66d53a57685f25f293c7e9c7b4418d452f6931c53a9849a0b3ca109385577"
+
+  mini_red_concrete:
+    display-name: "Mini Red Concrete"
+    input-material: "RED_CONCRETE"
+    amount: 4
+    texture-hash: "61856c7b378d350262143843d1f9fbb21911a71983ba7b39a4d4ba5b66bedc6"
+
+  mini_red_concrete_powder:
+    display-name: "Mini Red Concrete Powder"
+    input-material: "RED_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "f9a51f27d2d938897bc42a3fe2c3135da2671686f57824115f8f8da78a"
+
+  mini_black_concrete:
+    display-name: "Mini Black Concrete"
+    input-material: "BLACK_CONCRETE"
+    amount: 4
+    texture-hash: "4fc2372b457542c65483afa1442e1c33a5ff758d362ecec4348795172824d869"
+
+  mini_black_concrete_powder:
+    display-name: "Mini Black Concrete Powder"
+    input-material: "BLACK_CONCRETE_POWDER"
+    amount: 4
+    texture-hash: "2342b9bf9f1f6295842b0efb591697b14451f803a165ae58d0dcebd98eacc"
+
+  #========================================================================================================================================================================================================
+  #                                       --- TERRACOTTA & GLAZED TERRACOTTA ---
+  #========================================================================================================================================================================================================
+  mini_terracotta:
+    display-name: "Mini Terracotta"
+    input-material: "TERRACOTTA"
+    amount: 4
+    texture-hash: "82d5fefe20daf31c238ee227dd141827ada5ef8482d8d357bbe5a7cf40af85"
+
+  mini_white_terracotta:
+    display-name: "Mini White Terracotta"
+    input-material: "WHITE_TERRACOTTA"
+    amount: 4
+    texture-hash: "7159594388bf013a4e3e6869faabcb95d31dd3f4a258a535e7cbd92c9986b7"
+
+  mini_white_glazed_terracotta:
+    display-name: "Mini White Glazed Terracotta"
+    input-material: "WHITE_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "d2d895789f3894788aadf631d8804b84f9e3d7d2b87f048e93888b48e6ea0c8b"
+
+  mini_orange_terracotta:
+    display-name: "Mini Orange Terracotta"
+    input-material: "ORANGE_TERRACOTTA"
+    amount: 4
+    texture-hash: "7316c16b1ac470d2c114434ff8730f1815709383db6f3cf720c39b6dce2116"
+
+  mini_orange_glazed_terracotta:
+    display-name: "Mini Orange Glazed Terracotta"
+    input-material: "ORANGE_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "4aeb04de819c177668c513926437d0ecc1684e024d1d867af45901cb461bb475"
+
+  mini_magenta_terracotta:
+    display-name: "Mini Magenta Terracotta"
+    input-material: "MAGENTA_TERRACOTTA"
+    amount: 4
+    texture-hash: "3441528d288b2b79736cb2248878fb91efb4462d43bebd711f7326afbbf85"
+
+  mini_magenta_glazed_terracotta:
+    display-name: "Mini Magenta Glazed Terracotta"
+    input-material: "MAGENTA_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "c923c23fc4789252d4df73edb8663e43094124db79d666829bf376432e11c131"
+
+  mini_light_blue_terracotta:
+    display-name: "Mini Light Blue Terracotta"
+    input-material: "LIGHT_BLUE_TERRACOTTA"
+    amount: 4
+    texture-hash: "c7d93a8c8db10d3d74d535672d04facc96966ef41a3f801ec814770106aa7836"
+
+  mini_light_blue_glazed_terracotta:
+    display-name: "Mini Light Blue Glazed Terracotta"
+    input-material: "LIGHT_BLUE_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "31c895935174ac5f64edad215ce0b6b380137cc4d1f399a3df17dc3b2de40bde"
+
+  mini_yellow_terracotta:
+    display-name: "Mini Yellow Terracotta"
+    input-material: "YELLOW_TERRACOTTA"
+    amount: 4
+    texture-hash: "63517bc3ec32869d939c89d2961e30b7161eacd9255bec313be23960221d41b4"
+
+  mini_yellow_glazed_terracotta:
+    display-name: "Mini Yellow Glazed Terracotta"
+    input-material: "YELLOW_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "66a364cef6e955dbf9d9957481306c9e6eaae69df262ea6a8692860fae448cd"
+
+  mini_lime_terracotta:
+    display-name: "Mini Lime Terracotta"
+    input-material: "LIME_TERRACOTTA"
+    amount: 4
+    texture-hash: "55a117e161f7a291d0a3a168e77a21b09d39ffdf5773d22ac02f5fa6611db67"
+
+  mini_lime_glazed_terracotta:
+    display-name: "Mini Lime Glazed Terracotta"
+    input-material: "LIME_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "3e0b97c785e3976efa78acc828db67e71dead9b6694fde613d2e2e7cafbe1d5b"
+
+  mini_pink_terracotta:
+    display-name: "Mini Pink Terracotta"
+    input-material: "PINK_TERRACOTTA"
+    amount: 4
+    texture-hash: "f75db81e1592f32d771dd5dbc6c3a51e7a0d66b22dfe296b96868505ceec"
+
+  mini_pink_glazed_terracotta:
+    display-name: "Mini Pink Glazed Terracotta"
+    input-material: "PINK_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "1c120ac2fe2bd7cdc2e86a53408449e389915995d49170131a9c920deb05992e"
+
+  mini_gray_terracotta:
+    display-name: "Mini Gray Terracotta"
+    input-material: "GRAY_TERRACOTTA"
+    amount: 4
+    texture-hash: "9efa7b5e5e63d46d14615c61bed15427d90b261c7ca5e8159c466f09561da"
+
+  mini_gray_glazed_terracotta:
+    display-name: "Mini Gray Glazed Terracotta"
+    input-material: "GRAY_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "77729562c741e9b71aeebdb364572f099c73c0256d7d8c86331d7417a803c734"
+
+  mini_light_gray_terracotta:
+    display-name: "Mini Light Gray Terracotta"
+    input-material: "LIGHT_GRAY_TERRACOTTA"
+    amount: 4
+    texture-hash: "5cde99b72728ef881640fa5068d122e61dd9cf718dbb3709fc5b326f1af5d"
+
+  mini_light_gray_glazed_terracotta:
+    display-name: "Mini Light Gray Glazed Terracotta"
+    input-material: "LIGHT_GRAY_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "64c04d6eb5b685284370d032cdb69cf2d4fd1ae004574fb4422f2b5577dd1932"
+
+  mini_cyan_terracotta:
+    display-name: "Mini Cyan Terracotta"
+    input-material: "CYAN_TERRACOTTA"
+    amount: 4
+    texture-hash: "4463811fd0c48fcd73abcb7bbe5aa5ec6bc2809ffc5577d3f4559df30765f"
+
+  mini_cyan_glazed_terracotta:
+    display-name: "Mini Cyan Glazed Terracotta"
+    input-material: "CYAN_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "17c67af8137ffdcf87358f7ab6da6d0ea98a0960995c02e4e9818016348e1f81"
+
+  mini_purple_terracotta:
+    display-name: "Mini Purple Terracotta"
+    input-material: "PURPLE_TERRACOTTA"
+    amount: 4
+    texture-hash: "e6f54f82836a55924ee85dec56bbbd8ca14633daa9bfe3565592edf39a6de"
+
+  mini_purple_glazed_terracotta:
+    display-name: "Mini Purple Glazed Terracotta"
+    input-material: "PURPLE_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "6b75e87d50cb8966a3a56f73d0a16642948ff7d1479b7d59054154bf6be03cd4"
+
+  mini_blue_terracotta:
+    display-name: "Mini Blue Terracotta"
+    input-material: "BLUE_TERRACOTTA"
+    amount: 4
+    texture-hash: "7c116694731fbd272c1ffa4352a5359b6c3a4cb5864a74a5dbe0f665f8385c"
+
+  mini_blue_glazed_terracotta:
+    display-name: "Mini Blue Glazed Terracotta"
+    input-material: "BLUE_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "681e376322188b1e988309f99a015d949b68ffe9c9d73cb97813538d0864897e"
+
+  mini_brown_terracotta:
+    display-name: "Mini Brown Terracotta"
+    input-material: "BROWN_TERRACOTTA"
+    amount: 4
+    texture-hash: "54b932f117c87e11189f1c4c40cfd92be9119b1137cd610c68edd41ac58f14"
+
+  mini_brown_glazed_terracotta:
+    display-name: "Mini Brown Glazed Terracotta"
+    input-material: "BROWN_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "ad4eaa5430272c48e081d010b4f44ab6f4ae841e38967ba606601dbc35026eca"
+
+  mini_green_terracotta:
+    display-name: "Mini Green Terracotta"
+    input-material: "GREEN_TERRACOTTA"
+    amount: 4
+    texture-hash: "b55d5019c8d55bcb9dc3494ccc3419757f89c3384cf3c9abec3f18831f35b0"
+
+  mini_green_glazed_terracotta:
+    display-name: "Mini Green Glazed Terracotta"
+    input-material: "GREEN_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "6ce807f0a6f499ce9ccc65010faa54ed4e0ffa67cfb848cda159d3dca0a2dca5"
+
+  mini_red_terracotta:
+    display-name: "Mini Red Terracotta"
+    input-material: "RED_TERRACOTTA"
+    amount: 4
+    texture-hash: "9e42f682e430b55b61204a6f8b76d5227d278ed9ec4d98bda4a7a4830a4b6"
+
+  mini_red_glazed_terracotta:
+    display-name: "Mini Red Glazed Terracotta"
+    input-material: "RED_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "2d2225bfd64e7f7bec96bd830e5c81bc30fde96bbda16a0c5bce5b5ec18b6e12"
+
+  mini_black_terracotta:
+    display-name: "Mini Black Terracotta"
+    input-material: "BLACK_TERRACOTTA"
+    amount: 4
+    texture-hash: "e17ff8babb91b4dbad7524e58eed4b2f71565745989af9a2ccfcf3328f61bd2"
+
+  mini_black_glazed_terracotta:
+    display-name: "Mini Black Glazed Terracotta"
+    input-material: "BLACK_GLAZED_TERRACOTTA"
+    amount: 4
+    texture-hash: "ed4a321c4c3bc7cc391d45c2d304a4f526bcae5b23565a04135cef81ce5118cc"
+
+  #========================================================================================================================================================================================================
+  #                                       --- UTILITY, BOOKSHELVES & MISC ---
+  #========================================================================================================================================================================================================
+
+  mini_crafting_table:
+    display-name: "Mini Crafting Table"
+    input-material: "CRAFTING_TABLE"
+    amount: 4
+    texture-hash: "35b6e41f66a170ea23e85b2749694e2525061821686cbb1f615cea8102dba4fc"
+
+  mini_furnace:
+    display-name: "Mini Furnace"
+    input-material: "FURNACE"
+    amount: 4
+    texture-hash: "99713e1cdc23fdaf384095c3a3ad64c670d28ae9eef92d10f1ea055a85d90d49"
+
+  mini_burning_furnace:
+    display-name: "Mini Burning Furnace"
+    input-material: "FURNACE"
+    amount: 4
+    texture-hash: "53bf0b8859a1e57f3abd629c0c736e644e81651d4de034feea49f883f00e82b0"
+
+  mini_hay_bale:
+    display-name: "Mini Hay Bale"
+    input-material: "HAY_BLOCK"
+    amount: 4
+    texture-hash: "61f80251bdcbe14bf361d4f63e0ff3916efc73fdb3b2714d77287b5552f0514b"
+
+  mini_hay_bale_sideways:
+    display-name: "Mini Hay Bale Sideways"
+    input-material: "HAY_BLOCK"
+    amount: 4
+    texture-hash: "e506c8249aff974bd548515f65ef981c804a5593f12c2451aabe86731e0c1b1b"
+
+  mini_hay_bale_option2:
+    display-name: "Mini Hay Bale option 2"
+    input-material: "HAY_BLOCK"
+    amount: 4
+    texture-hash: "9af328c87b068509aca9834eface197705fe5d4f0871731b7b21cd99b9fddc"
+
+  mini_dried_kelp:
+    display-name: "Mini Dried Kelp"
+    input-material: "DRIED_KELP_BLOCK"
+    amount: 4
+    texture-hash: "eac117f627a2b32509928f5b2cc581e055bc7d3300591ae7cd3acc56d31a2186"
+
+  mini_sponge:
+    display-name: "Mini Sponge"
+    input-material: "SPONGE"
+    amount: 4
+    texture-hash: "12f096eef87d9f20ccaaba2a02eed6f43e6432a6928fe16467cb4deb5e74118c"
+
+  mini_wet_sponge:
+    display-name: "Mini Wet Sponge"
+    input-material: "WET_SPONGE"
+    amount: 4
+    texture-hash: "211ab3f0f6c3c848c1696abb955a7bfdf94a9c9023035d79fd13f4bd1e1bd720"
+
+  mini_pumpkin:
+    display-name: "Mini Pumpkin"
+    input-material: "PUMPKIN"
+    amount: 4
+    texture-hash: "784f5adcf0480055f969e20a284d7544e3e19ef340a037c68d6e659b7fa49129"
+
+  mini_pumpkin_rounded:
+    display-name: "Mini Pumpkin Rounded"
+    input-material: "PUMPKIN"
+    amount: 4
+    texture-hash: "2391d62ce690e92c8670935f5817631df1b407d50933c5024f61c69cda298b86"
+
+  mini_carved_pumpkin:
+    display-name: "Mini Carved Pumpkin"
+    input-material: "CARVED_PUMPKIN"
+    amount: 4
+    texture-hash: "53ad79207c3f8bbf4b1d532cfe86dccb57d2c97aeeb51ef00a660afdceab5fa9"
+
+  mini_melon:
+    display-name: "Mini Melon"
+    input-material: "MELON"
+    amount: 4
+    texture-hash: "8092d760c453625594662c9fc868152a01a1f6f8d6137fb868da5a95bbd1f58"
+
+  mini_melon_rounded:
+    display-name: "Mini Melon Rounded"
+    input-material: "MELON"
+    amount: 4
+    texture-hash: "89fc9c5b8736f36f3405cbe1363d434c141cd23aac04186476af0a0f7877aef4"
+
+  mini_bookshelf:
+    display-name: "Mini Bookshelf"
+    input-material: "BOOKSHELF"
+    amount: 4
+    texture-hash: "e0550a4a3f8e8ca7f727057e65adb8386043ccb305165d3fba4e5e6018d19814"
+
+  mini_books_type_1:
+    display-name: "Mini Books"
+    input-material: "BOOKSHELF"
+    amount: 4
+    texture-hash: "b33598437e313329eb141a13e92d9b0349aabe5c6482a5dde7b73753634aba"
+
+  mini_books_type_2:
+    display-name: "Mini Books Type 2"
+    input-material: "BOOKSHELF"
+    amount: 4
+    texture-hash: "ec6d9024fc5412e8e2664123732d2291dfc6bb175f72cf894096f7f313641fd4"
+
+  mini_books_type_3:
+    display-name: "Mini Old Books"
+    input-material: "BOOKSHELF"
+    amount: 4
+    texture-hash: "e344d83e7c6ece90d34c685a9a3384f8e8d0151633fc2eeae4d4b636862d33"
+
+  mini_thick_book:
+    display-name: "Mini Thick Book"
+    input-material: "BOOKSHELF"
+    amount: 4
+    texture-hash: "6de4ab129e137f9f4cbf7060318ee1748dc39da9b5d129a8da0e614e2337693"
+
+  mini_thick_book_type_2:
+    display-name: "Mini Enchanted Book"
+    input-material: "BOOKSHELF"
+    amount: 4
+    texture-hash: "d53fa1b57e4f784d16e5a2daa2f746b2ecfe624ccd74a4d4acc6a2e6a083f54e"
+
+  mini_ancient_books:
+    display-name: "Mini Ancient Books"
+    input-material: "BOOKSHELF"
+    amount: 4
+    texture-hash: "c0cf74e2638ba5ad32237a37b1d76aa123d18546e7eb9a6b9961e4bf1c3a919"
+
+  mini_pile_of_scrolls:
+    display-name: "Mini Pile Of Scrolls"
+    input-material: "PAPER"
+    amount: 4
+    texture-hash: "777e40bb0b371b3745dfe5ed52033ffcfc8c82feefc25b34bac7aed1ff9ce58f"
+
+  mini_pile_of_scrolls_type_2:
+    display-name: "Mini Pile Of Scrolls type 2"
+    input-material: "PAPER"
+    amount: 4
+    texture-hash: "4138990111e2a00fbd160134e6b721a9770e882dfcda3ccd294e28419439027f"
+
+  mini_chest:
+    display-name: "Mini Chest"
+    input-material: "CHEST"
+    amount: 4
+    texture-hash: "d5c6dc2bbf51c36cfc7714585a6a5683ef2b14d47d8ff714654a893f5da622"
+
+  mini_present_red:
+    display-name: "Mini Present Red"
+    input-material: "CHEST"
+    amount: 4
+    texture-hash: "bd7a9f6ed08dd217fdf09f4652bf6b7af621e1d5f8963605349da73998a443"
+
+  mini_present_green:
+    display-name: "Mini Present Green"
+    input-material: "CHEST"
+    amount: 4
+    texture-hash: "f0eb64771364cc5469e8c5ea6a3ad5d82bb2e7eb5721dcf98b34243791c6cb7"
+
+  mini_barrel:
+    display-name: "Mini Barrel"
+    input-material: "BARREL"
+    amount: 4
+    texture-hash: "bae751770a70a008a03e1397cbc5be8ae3f782986a814f04943cf62a7121bc3f"
+
+  mini_barrel_rounded:
+    display-name: "Mini Barrel Rounded"
+    input-material: "BARREL"
+    amount: 4
+    texture-hash: "c67d5d37cd64ce3fb57377d25d6152aa4ac2e37954248d5d91f88fbd791f4766"
+
+  mini_barrel_sideways:
+    display-name: "Mini Barrel Sideways"
+    input-material: "BARREL"
+    amount: 4
+    texture-hash: "c7502c6a68852ebf1087a2ed2a63f8d85898a7049d514b2c675fa0915bf47246"
+
+  mini_barrel_sideways_rounded:
+    display-name: "Mini Barrel Sideways Rounded"
+    input-material: "BARREL"
+    amount: 4
+    texture-hash: "fc1b07e271e47970ad59ac324620b71ac66aef7cf2051d25ad009bf019b92606"
+
+  mini_ender_chest:
+    display-name: "Mini Ender Chest"
+    input-material: "ENDER_CHEST"
+    amount: 4
+    texture-hash: "ddcc189633c789cb6d5e78d13a5043b26e7b40cdb7cfc4e23aa2279574967b4"
+
+  mini_shulker:
+    display-name: "Mini Shulker"
+    input-material: "SHULKER_BOX"
+    amount: 4
+    texture-hash: "25c4d24affdd48102620361527d2156e18c223bae5189ac439815643f3cff9d"
+
+  mini_red_shulker:
+    display-name: "Mini Red Shulker"
+    input-material: "RED_SHULKER_BOX"
+    amount: 4
+    texture-hash: "6eb911ea94b5a1cf77f3ca637a3b1662b35121bd72e118651184f2fb1060d1"
+
+  mini_green_shulker:
+    display-name: "Mini Green Shulker"
+    input-material: "GREEN_SHULKER_BOX"
+    amount: 4
+    texture-hash: "38e3d6aa9880b5ba632e3c2f4766c3071936073a75dcedd445ae7aa572a5098e"
+
+  mini_blue_shulker:
+    display-name: "Mini Blue Shulker"
+    input-material: "BLUE_SHULKER_BOX"
+    amount: 4
+    texture-hash: "f25dc698c5332b56767425c05a945e873e610b461e2629ef4972ba10f614cabc"

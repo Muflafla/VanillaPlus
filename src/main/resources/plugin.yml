@@ -1,6 +1,6 @@
 name: VanillaPlus
 version: '${version}'
-main: BK.vanilaPlus.VanillaPlus
+main: BK.VanillaPlus.VanillaPlus
 api-version: '1.21'
 load: POSTWORLD
 
@@ -8,19 +8,56 @@ commands:
   vp-reload:
     description: Reloads the VanillaPlus configuration.
     permission: VanillaPlus.reload
-    default: op # This means only Ops can use it by default
+    usage: /vp-reload
   vp-setspawn:
     description: Set the world spawn to your current location
-    permission: VanillaPlus.spawn
-    default: op # This means only Ops can use it by default
+    permission: VanillaPlus.setspawn
     usage: /vp-setspawn
-  vp-stash:
+  vp-spawn:
+    description: Teleports player to the spawn
+    permission: VanillaPlus.spawn
+    usage: /vp-spawn
+  vp-inspect-stash:
     description: Inspects a player's virtual stash.
+    permission: VanillaPlus.inspect_stash
+    usage: /vp-inspect-stash <player>
+  vp-ram-stashes:
+    description: Shows stashes in ram.
+    permission: VanillaPlus.ram_stashes
+    usage: /vp-ram-stashes
+  vp-overflow:
+    description: Changes the overflow setting for this player.
+    permission: VanillaPlus.overflow
+    usage: /vp-overflow <on|off>
+  vp-stash:
+    description: Opens your stash.
     permission: VanillaPlus.stash
-    default: op # This means only Ops can use it by default
-    usage: /vp-stash <player>
+    usage: /vp-stash
   vp-hud:
     description: Toggle your scoreboard HUD elements
     permission: VanillaPlus.hud
-    default: true # This allows ALL players to use it by default!
     usage: /vp-hud <deaths | sleep | ping> [ 0 | 1 | 2 ]
+  vp-world-age:
+    description: Show world age and play time of the player using it
+    permission: VanillaPlus.world_age
+    usage: /vp-world-age
+  vp-create-warp:
+    description: Create a new warp
+    permission: VanillaPlus.create_warp
+    usage: /vp-create-warp <warp name>
+  vp-delete-warp:
+    description: Delete a warp
+    permission: VanillaPlus.delete_warp
+    usage: /vp-delete-warp <warp name>
+  vp-warp:
+    description: Warp to a location
+    permission: VanillaPlus.warp
+    usage: /vp-warp <warp name>
+  vp-warp-list:
+    description: Returns a list of all warps
+    permission: VanillaPlus.warp_list
+    usage: /vp-warp-list
+  vp-chunkload:
+    description: Loads a chunk area around the player
+    permission: VanillaPlus.chunkload
+    usage: /vp-chunkload

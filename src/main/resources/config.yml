@@ -1,6 +1,6 @@
 # VanillaPlus Configuration
-#do not change this version number!
-Config-Version: "1.0.3"
+#Do not change this version number!
+Config-Version: "1.0.4"
 
 # ==========================================================
 #               Login msg's and fireworks
@@ -54,14 +54,31 @@ Clear-Weather-On-Sleep: true
 # ==========================================================
 #This enables use of the Mystical Stash
 Enable-Mystical-Stash: true
+#If this is enabled every player gets a book to access their stash / if disabled this you can only use a command to access the stash
+Enable-Mystical-Stash-Book: true
+#Set a name for your stashes default = Mystical Stash (MC color codes like §5 can also be used)
+Stash-Name: "§5Mystical Stash"
 #This enables the use of a chest named Mystical Stash to open your stash
 Enable-Mystical-Stash-Chests: true
+#The number of rows in the stash inventory. Each row contains 9 slots.
+#Because Minecraft uses a "Rule of 9," each row adds 9 slots.
+#Example: 6 rows = 54 total items (AKA a large chest)
+#Stash-Rows must be a whole number between 1 and 6.
+#WARNING: Do not reduce this number after players have already stored items.
+#Reducing the size will "hide" items in higher slots until the value is increased again.
+Stash-Rows: 6
+#If this is enabled you drop your stash items upon death
+Enable-Drop-Stash-On-Death: false
+#If this is enabled items on the ground wil go into your stash if the inv is full. If this is enabled players can still enable or disable this for them self.
+Enable-Stash-Overflow: true
+
 # ==========================================================
 #                   AUTO BAN FEATURE
 # ==========================================================
 #If this is enabled it will automatically ban anyone that joins that was not on the whitelist, So they'll be instantly greeted with a ban screen when trying to join.
 Ban-On-Join: true
 Ban-Reason: "You where not whitelisted"
+
 # ==========================================================
 #                   creepers/enderman/phantoms/ghast
 # ==========================================================
@@ -74,8 +91,8 @@ Disable-Ghast-Explosions: false
 Disable-Ghast-Block-Damage: false
 #If this is enabled and a Ghast fireball explodes it will still damage the player and blow up blocks but give all the block back.
 Ghast-Gives-all-Blocks: true
-#If this is enabled creepers don't spawn at all
 
+#If this is enabled creepers don't spawn at all
 Disable-Creeper-Spawn: false
 #If this is enabled creepers won't explode at all.
 Disable-Creeper-Explosions: false
@@ -86,9 +103,9 @@ Creeper-Gives-all-Blocks: true
 
 #If this is enabled it wil stop enderman from picking up blocks
 Stop-Enderman-From-Griefing: true
-# Set this to false to stop the Enderman messages from showing up.
+#Set this to false to stop the Enderman messages from showing up.
 Show-Enderman-Messages: true
-# You can add or remove messages here. Use %d where the number of Endermen should go.
+#You can add or remove messages here. Use %d where the number of Endermen should go. And §5 for the purple text color other color codes also work.
 Enderman-Messages:
     - "%d §5Endermen tried to redecorate your world. Denied."
     - "%d §5Endermen were caught red-handed. Block theft failed."
@@ -134,14 +151,6 @@ Enderman-Messages:
 
 
 # ==========================================================
-# HORROR SETTINGS
-# ==========================================================
-# If set to true, the plugin will occasionally play ghost sounds,
-# spawn fake entities, and send 'creepy' messages to random players.
-# This is a purely cosmetic psychological horror feature.
-Enable-Creepy-Stuff: false
-
-# ==========================================================
 #                          Beacons
 # ==========================================================
 #Enables the increased beacon radius
@@ -160,6 +169,65 @@ Enable-Beacon-Changes: true
 Beacon-Range-Modifier: 30
 
 # ==========================================================
+#                       Warps
+# ==========================================================
+Enable-Warps: false
+
+# ==========================================================
+#                       Chunk loading
+# ==========================================================
+#If this is enabled Offline chunk loading will be enabled (players can use a command to keep an area active for farms or other usages)
+Enable-Offline-Chunk-Loading: false
+
+# ==========================================================
+#                       Heads/Mini Blocks
+# ==========================================================
+#if this is enabled if a player gets killed they drop their player head
+Enable-Players-Drop-Head: true
+#if this is enabled you can get a small version of a block using a stonecutter
+Enable-Mini-Blocks: true
+
+# ==========================================================
+#                       Pick block from shulkerbox
+# ==========================================================
+# Enable quick-pull access from off-hand Shulker Boxes
+# When true: Placing a Shulker Box from the off-hand against a block
+# will automatically pull that block type from the Shulker into the main hand.
+Enable-Pick-Block-From-Shulker: true
+
+# ==========================================================
+#                       Tool Protection msg's
+# ==========================================================
+Enable-Tool-Protection: true
+
+# ==========================================================
+#                       Hardened PickAxe
+# ==========================================================
+#If this is enabled you can craft a hardened pickaxe which can instamine deepslate when with haste 2
+Enable-Hardened-PickAxe: false
+#Recipe
+# NETHER_STAR , NETHERITE_INGOT , NETHER_STAR
+# NETHERITE_INGOT , NETHERITE_PICKAXE , NETHERITE_INGOT
+# NETHER_STAR , NETHERITE_INGOT , NETHER_STAR
+
+#DONT CHANGE THIS VALUE
+Hardened-Pickaxe-Ever-Used: false
+
+# ==========================================================
+#                       Villagers
+# ==========================================================
+#If this is set to true the best price ever shown to a player by this villager, Wil become the new global standard for this villager for all players.
+Enable-Global-Villager-Pricing: false
+
+# ==========================================================
+# HORROR SETTINGS
+# ==========================================================
+# If set to true, the plugin will occasionally play ghost sounds,
+# spawn fake entities, and send 'creepy' messages to random players.
+# This is a purely cosmetic psychological horror feature.
+Enable-Creepy-Stuff: false
+
+# ==========================================================
 # CUSTOM RECIPE CONFIGURATION
 # ==========================================================
 # 1. 'Result' must be a valid Minecraft Material name.
@@ -167,7 +235,7 @@ Beacon-Range-Modifier: 30
 # 3. 'Ingredients' maps the letters in your shape to items.
 # 4. Use " " for empty slots, Aka just use a space.
 # ==========================================================
-
+#If this is enabled the Custom-Recipes below wil be injected into the game
 Enable-Custom-Recipes: true
 
 Custom-Recipes:
@@ -195,8 +263,6 @@ Custom-Recipes:
             G: "DRAGON_BREATH"
             H: "TOTEM_OF_UNDYING"
             I: "ENCHANTED_GOLDEN_APPLE"
-
-
 
 #    #here is an empty one for you to edit.
 #    WHATEVER:
