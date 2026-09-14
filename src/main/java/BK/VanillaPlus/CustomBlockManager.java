@@ -63,7 +63,7 @@ public class CustomBlockManager implements Listener
             }
         }
 
-        stopReInjection = true;//DEV TESTING FOR ADDING NEW BLOCKS TO THE MINI BLOCKS FILE. IF SET TO FALSE IT WON'T STOP RE-INJECTION ON RELOAD.
+        //stopReInjection = true;//DEV TESTING FOR ADDING NEW BLOCKS TO THE MINI BLOCKS FILE. IF SET TO FALSE IT WON'T STOP RE-INJECTION ON RELOAD.
 
         //Check if the server isn't just booting up. If the server is just booting up we don't need to remove anything
         if(!plugin.bootInject)
